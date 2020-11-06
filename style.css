@@ -48,6 +48,8 @@ ol, ul {
 /* -------------------------------------------------------------------------- */
 :root {
   --color-accent: #3ACE00;
+  --color-text-main: #333;
+  --color-text-auxillary: #777;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -60,10 +62,12 @@ Scale ratio mobile: 1.2 (default = mobile first ;) )
 Scale ratio desktop: 1.25
 Source: https://archetypeapp.com/#
 */
+
 html, body {
   font-family: 'Lato', sans-serif;
   font-size: 10px;
   font-weight: 300;
+  color: var(--color-text-main);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -123,4 +127,17 @@ h1 {
   h1 {
     font-size: 6.1em;
   }
+}
+
+/* -------------------------------------------------------------------------- */
+/*	Reusable
+/* -------------------------------------------------------------------------- */
+
+
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
 }
