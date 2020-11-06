@@ -43,6 +43,25 @@ ol, ul {
   list-style: none;
 }
 
+/*******************************/
+/* wrap long titles */
+h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+
+    -ms-word-break: break-all !important;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all !important;
+    /* Instead use this non-standard one: */
+    word-break: break-word !important;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto !important;
+    -moz-hyphens: auto !important;
+    -webkit-hyphens: auto !important;
+    hyphens: auto !important;
+  }
+
 /* -------------------------------------------------------------------------- */
 /*	Vars
 /* -------------------------------------------------------------------------- */
