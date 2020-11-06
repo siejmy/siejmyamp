@@ -146,9 +146,6 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/classes/class-siejmyamp-svg-icons.php';
 require get_template_directory() . '/inc/svg-icons.php';
 
-// Handle Customizer settings.
-require get_template_directory() . '/classes/class-siejmyamp-customize.php';
-
 // Require Separator Control class.
 require get_template_directory() . '/classes/class-siejmyamp-separator-control.php';
 
