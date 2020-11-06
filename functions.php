@@ -484,7 +484,6 @@ function siejmyamp_customize_controls_enqueue_scripts() {
 
 	// Add script for controls.
 	wp_enqueue_script( 'siejmyamp-customize-controls', get_template_directory_uri() . '/assets/js/customize-controls.js', array( 'siejmyamp-color-calculations', 'customize-controls', 'underscore', 'jquery' ), $theme_version, false );
-	wp_localize_script( 'siejmyamp-customize-controls', 'twentyTwentyBgColors', siejmyamp_get_customizer_color_vars() );
 }
 
 add_action( 'customize_controls_enqueue_scripts', 'siejmyamp_customize_controls_enqueue_scripts' );
@@ -500,17 +499,8 @@ function siejmyamp_customize_preview_init() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	wp_enqueue_script( 'siejmyamp-customize-preview', get_theme_file_uri( '/assets/js/customize-preview.js' ), array( 'customize-preview', 'customize-selective-refresh', 'jquery' ), $theme_version, true );
-	wp_localize_script( 'siejmyamp-customize-preview', 'twentyTwentyBgColors', siejmyamp_get_customizer_color_vars() );
 	wp_localize_script( 'siejmyamp-customize-preview', 'twentyTwentyPreviewEls', siejmyamp_get_elements_array() );
 
-	wp_add_inline_script(
-		'siejmyamp-customize-preview',
-		sprintf(
-			'wp.customize.selectiveRefresh.partialConstructor[ %1$s ].prototype.attrs = %2$s;',
-			wp_json_encode( 'cover_opacity' ),
-			wp_json_encode( siejmyamp_customize_opacity_range() )
-		)
-	);
 }
 
 add_action( 'customize_preview_init', 'siejmyamp_customize_preview_init' );
@@ -552,25 +542,6 @@ function siejmyamp_get_color_for_area( $area = 'content', $context = 'text' ) {
 
 	// Return false if the option doesn't exist.
 	return false;
-}
-
-/**
- * Returns an array of variables for the customizer preview.
- *
- * @since SiejmyAMP 1.0
- *
- * @return array
- */
-function siejmyamp_get_customizer_color_vars() {
-	$colors = array(
-		'content'       => array(
-			'setting' => 'background_color',
-		),
-		'header-footer' => array(
-			'setting' => 'header_footer_background_color',
-		),
-	);
-	return $colors;
 }
 
 /**
