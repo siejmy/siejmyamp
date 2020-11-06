@@ -177,7 +177,6 @@ function siejmyamp_register_styles() {
 	wp_enqueue_style('font-lato', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,300&display=swap', array(), '1');
 
 	wp_enqueue_style( 'siejmyamp-style', get_stylesheet_uri(), array(), $theme_version );
-	wp_style_add_data( 'siejmyamp-style', 'rtl', 'replace' );
 
 	// Add output of Customizer settings as inline style.
 	wp_add_inline_style( 'siejmyamp-style', siejmyamp_get_customizer_css( 'front-end' ) );
@@ -384,7 +383,6 @@ function siejmyamp_block_editor_styles() {
 
 	// Enqueue the editor styles.
 	wp_enqueue_style( 'siejmyamp-block-editor-styles', get_theme_file_uri( '/assets/css/editor-style-block.css' ), array(), wp_get_theme()->get( 'Version' ), 'all' );
-	wp_style_add_data( 'siejmyamp-block-editor-styles', 'rtl', 'replace' );
 
 	// Add inline style from the Customizer.
 	wp_add_inline_style( 'siejmyamp-block-editor-styles', siejmyamp_get_customizer_css( 'block-editor' ) );
