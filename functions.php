@@ -184,6 +184,8 @@ function siejmyamp_register_styles() {
 
 	$theme_version = wp_get_theme()->get( 'Version' );
 
+	wp_enqueue_style('font-lato', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,300&display=swap', array(), '1');
+
 	wp_enqueue_style( 'siejmyamp-style', get_stylesheet_uri(), array(), $theme_version );
 	wp_style_add_data( 'siejmyamp-style', 'rtl', 'replace' );
 
