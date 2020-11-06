@@ -50,6 +50,7 @@ ol, ul {
   --color-accent: #3ACE00;
   --color-text-main: #333;
   --color-text-auxillary: #777;
+  --overlays-bg-dark: #63535B; /* dark liver */
 }
 
 /* -------------------------------------------------------------------------- */
@@ -65,67 +66,87 @@ Source: https://archetypeapp.com/#
 
 html, body {
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: 300;
   color: var(--color-text-main);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
+  margin-bottom: 3rem;
 }
 
 p {
-  font-size: 1em;
+  font-size: 1.6em;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+
+li {
+  font-size: 1.6em;
+  line-height: 3rem;
 }
 
 h6 {
-  font-size: 1.2em;
+  font-size: 1.92em;
+  line-height: 3rem;
 }
 
 h5 {
-  font-size: 1.4375em;
+  font-size: 2.304em;
+  line-height: 3rem;
 }
 
 h4 {
-  font-size: 1.725em;
+  font-size: 2.7648em;
+  line-height: 3rem;
 }
 
 h3 {
-  font-size: 3.32em;
+  font-size: 3.31776em;
+  line-height: 6rem;
 }
 
 h2 {
-  font-size: 2.075em;
+  font-size: 3.98131em;
+  line-height: 6rem;
 }
 
 h1 {
-  font-size: 2.9875em;
+  font-size: 4.77757em;
+  line-height: 3.75rem;
 }
 
 @media (min-width: 768px) {
   /* Scale ratio desktop: 1.25 */
   h6 {
-    font-size: 1.25em;
+    font-size: 2em;
+    line-height: 3rem;
   }
 
   h5 {
-    font-size: 1.5625em;
+    font-size: 2.5em;
+    line-height: 3rem;
   }
 
   h4 {
-    font-size: 1.956em;
+    font-size: 3.125em;
+    line-height: 6rem;
   }
 
   h3 {
-    font-size: 2.44em;
+    font-size: 3.90625em;
+    line-height: 6rem;
   }
 
   h2 {
-    font-size: 3.05em;
+    font-size: 4.88281em;
+    line-height: 6rem;
   }
 
   h1 {
-    font-size: 3.81em;
+    font-size: 6.10352em;
+    line-height: 9rem;
   }
 }
 
