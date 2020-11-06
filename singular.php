@@ -11,8 +11,9 @@
 
 get_header();
 ?>
+<?php include(dirname(__FILE__) . '/parts/headers/home.php'); ?>
 
-<main id="site-content" role="main">
+<main id="site-content" class="site-content-singular" role="main">
 
 	<?php
 
@@ -28,6 +29,17 @@ get_header();
 	?>
 
 </main><!-- #site-content -->
+
+<style>
+.site-content-singular .featured-media amp-img {
+	width: 100%;
+}
+
+.site-content-singular .entry-content {
+	max-width: 680px;
+	margin: 0 auto;
+}
+</style>
 
 <?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
 

@@ -10,6 +10,8 @@
 
 get_header();
 ?>
+<?php include(dirname(__FILE__) . '/../parts/headers/home.php'); ?>
+
 
 <main id="site-content" role="main">
 
