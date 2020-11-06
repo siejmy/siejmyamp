@@ -158,9 +158,6 @@ require get_template_directory() . '/classes/class-siejmyamp-walker-page.php';
 // Custom script loader class.
 require get_template_directory() . '/classes/class-siejmyamp-script-loader.php';
 
-// Custom CSS.
-require get_template_directory() . '/inc/custom-css.php';
-
 /**
  * Register and Enqueue Styles.
  */
@@ -171,9 +168,6 @@ function siejmyamp_register_styles() {
 	wp_enqueue_style('font-lato', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,300&display=swap', array(), '1');
 
 	wp_enqueue_style( 'siejmyamp-style', get_stylesheet_uri(), array(), $theme_version );
-
-	// Add output of Customizer settings as inline style.
-	wp_add_inline_style( 'siejmyamp-style', siejmyamp_get_customizer_css( 'front-end' ) );
 
 	// Add print CSS.
 	wp_enqueue_style( 'siejmyamp-print-style', get_template_directory_uri() . '/print.css', null, $theme_version, 'print' );
@@ -353,9 +347,6 @@ function siejmyamp_block_editor_styles() {
 	// Enqueue the editor styles.
 	wp_enqueue_style( 'siejmyamp-block-editor-styles', get_theme_file_uri( '/assets/css/editor-style-block.css' ), array(), wp_get_theme()->get( 'Version' ), 'all' );
 
-	// Add inline style from the Customizer.
-	wp_add_inline_style( 'siejmyamp-block-editor-styles', siejmyamp_get_customizer_css( 'block-editor' ) );
-
 	// Enqueue the editor script.
 	wp_enqueue_script( 'siejmyamp-block-editor-script', get_theme_file_uri( '/assets/js/editor-script-block.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
 }
@@ -376,29 +367,6 @@ function siejmyamp_classic_editor_styles() {
 }
 
 add_action( 'init', 'siejmyamp_classic_editor_styles' );
-
-/**
- * Output Customizer settings in the classic editor.
- * Adds styles to the head of the TinyMCE iframe. Kudos to @Otto42 for the original solution.
- *
- * @param array $mce_init TinyMCE styles.
- * @return array TinyMCE styles.
- */
-function siejmyamp_add_classic_editor_customizer_styles( $mce_init ) {
-
-	$styles = siejmyamp_get_customizer_css( 'classic-editor' );
-
-	if ( ! isset( $mce_init['content_style'] ) ) {
-		$mce_init['content_style'] = $styles . ' ';
-	} else {
-		$mce_init['content_style'] .= ' ' . $styles . ' ';
-	}
-
-	return $mce_init;
-
-}
-
-add_filter( 'tiny_mce_before_init', 'siejmyamp_add_classic_editor_customizer_styles' );
 
 /**
  * Block Editor Settings.
