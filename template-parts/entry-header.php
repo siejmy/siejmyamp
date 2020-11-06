@@ -42,7 +42,10 @@ if ( is_singular() ) {
 			<?php
 		}
 
-		if ( is_singular() ) {
+		if (is_front_page()) {
+			// nothing
+		}
+		else if ( is_singular() ) {
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		} else {
 			the_title( '<h2 class="entry-title heading-size-1"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
