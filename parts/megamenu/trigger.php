@@ -23,6 +23,7 @@
 .megamenu-section .trigger {
   display: inline-block;
   vertical-align: top;
+  margin: 5px 5px 5px 5px;
 }
 
 .megamenu-section .trigger .icon {

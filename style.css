@@ -65,7 +65,7 @@ Source: https://archetypeapp.com/#
 
 html, body {
   font-family: 'Lato', sans-serif;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 300;
   color: var(--color-text-main);
 }
@@ -75,19 +75,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-size: 1.6em;
+  font-size: 1em;
 }
 
 h6 {
-  font-size: 1.92em;
+  font-size: 1.2em;
 }
 
 h5 {
-  font-size: 2.3em;
+  font-size: 1.4375em;
 }
 
 h4 {
-  font-size: 2.76em;
+  font-size: 1.725em;
 }
 
 h3 {
@@ -95,37 +95,37 @@ h3 {
 }
 
 h2 {
-  font-size: 3.98em;
+  font-size: 2.075em;
 }
 
 h1 {
-  font-size: 4.78em;
+  font-size: 2.9875em;
 }
 
 @media (min-width: 768px) {
   /* Scale ratio desktop: 1.25 */
   h6 {
-    font-size: 2em;
+    font-size: 1.25em;
   }
 
   h5 {
-    font-size: 2.5em;
+    font-size: 1.5625em;
   }
 
   h4 {
-    font-size: 3.13em;
+    font-size: 1.956em;
   }
 
   h3 {
-    font-size: 3.91em;
+    font-size: 2.44em;
   }
 
   h2 {
-    font-size: 4.88em;
+    font-size: 3.05em;
   }
 
   h1 {
-    font-size: 6.1em;
+    font-size: 3.81em;
   }
 }
 
