@@ -10,7 +10,7 @@
 <style>
   .header-subline {
     width: 100%;
-    height: 4rem;
+    height: 9rem;
   }
 
   .header-subline .megamenu-section {

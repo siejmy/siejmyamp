@@ -19,7 +19,7 @@
 	text-align: center;
 	line-height: 14px;
   background: white;
-  border: 1px solid #bbb;
+  border: 1px solid #ccc;
   border-radius: 4px;
   padding: 4px;
   margin-top: 9px;
@@ -36,7 +36,7 @@
   top: -4px;
   z-index: 2;
 
-  border: solid #bbb;
+  border: solid #ccc;
   border-width: 0 1px 1px 0;
   background: white;
   display: inline-block;

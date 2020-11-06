@@ -62,6 +62,7 @@
   .header-home h2 {
     font-weight: 300;
     font-size: 17px;
+    line-height: 22px;
     letter-spacing: 3.1px;
   }
 </style>

@@ -218,11 +218,7 @@ add_action( 'wp_print_footer_scripts', 'siejmyamp_skip_link_focus_fix' );
 function siejmyamp_menus() {
 
 	$locations = array(
-		'primary'  => __( 'Desktop Horizontal Menu', 'siejmyamp' ),
-		'expanded' => __( 'Desktop Expanded Menu', 'siejmyamp' ),
-		'mobile'   => __( 'Mobile Menu', 'siejmyamp' ),
-		'footer'   => __( 'Footer Menu', 'siejmyamp' ),
-		'social'   => __( 'Social Menu', 'siejmyamp' ),
+		'megamenu'  => 'Megamenu w sidebarze',
 	);
 
 	register_nav_menus( $locations );
