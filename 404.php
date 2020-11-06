@@ -1,4 +1,6 @@
 <?php
+ require_once(dirname(__FILE__) . '/config.php');
+
 /**
  * The template for displaying the 404 template in the SiejmyAMP theme.
  *
@@ -10,27 +12,22 @@
 get_header();
 ?>
 
-<main id="site-content" role="main">
+<?php include(dirname(__FILE__) . '/parts/headers/home.php'); ?>
 
-	<div class="section-inner thin error404-content">
-
-		<h1 class="entry-title"><?php _e( 'Page Not Found', 'siejmyamp' ); ?></h1>
-
-		<div class="intro-text"><p><?php _e( 'The page you were looking for could not be found. It might have been removed, renamed, or did not exist in the first place.', 'siejmyamp' ); ?></p></div>
-
-		<?php
-		get_search_form(
-			array(
-				'label' => __( '404 not found', 'siejmyamp' ),
-			)
-		);
-		?>
-
-	</div><!-- .section-inner -->
-
-</main><!-- #site-content -->
-
-<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
+<main id="site-content" class="site-content-404" role="main">
+	<h1>Nie znaleźliśmy tego, czego szukałeś</h1>
+	<h2>Bardzo nam przykro, przepraszamy!</h2>
+	<p>Naprawdę nie wiemy jak to się stało, że nie ma tutaj tej strony.
+	Jeśli chdesz nam pomóc i jesteś pewien, że strona powinna tutaj być — napisz do
+	nas na <strong><?php echo(Config::$contantEmail); ?></strong>
+</main>
+<style>
+.site-content-404 {
+	max-width: 680px;
+	margin: 0 auto;
+	margin-bottom: 18rem;
+}
+</style>
 
 <?php
 get_footer();
