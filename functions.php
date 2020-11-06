@@ -325,15 +325,6 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 }
 
 /**
- * Include a skip to content link at the top of the page so that users can bypass the menu.
- */
-function siejmyamp_skip_link() {
-	echo '<a class="skip-link screen-reader-text" href="#site-content">' . __( 'Skip to the content', 'siejmyamp' ) . '</a>';
-}
-
-add_action( 'wp_body_open', 'siejmyamp_skip_link', 5 );
-
-/**
  * Register widget areas.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
