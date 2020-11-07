@@ -219,6 +219,7 @@ function siejmyamp_menus() {
 
 	$locations = array(
 		'megamenu'  => 'Megamenu w sidebarze',
+		'footer' => 'Menu w stopce',
 	);
 
 	register_nav_menus( $locations );
