@@ -14,6 +14,7 @@
 ?>
 
 <footer id="site-footer" role="contentinfo" class="header-footer-group">
+	<div class="footer-shadow"></div>
 	<div class="footer-content">
 		<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
 	</div>
@@ -21,20 +22,42 @@
 
 <style>
 footer {
-	margin: 0 auto;
-	margin-left: -10%;
-	width: 120%;
-	padding-top: 4%;
-	padding-left: 14%;
-	padding-right: 14%;
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 3rem;
+	width: 100%;
 	background: var(--overlays-bg-dark);
-	box-shadow: inset 0px 10px 10px 8px rgba(0,0,0,0.47);
 	color: white;
+}
+
+.footer-shadow {
+	display: block;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 3rem;
+	z-index: 1;
+	overflow: hidden;
+}
+
+.footer-shadow::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100px;
+	right: -100px;
+	height: 6rem;
+	z-index: 1;
+	box-shadow: 0px 0px 28px 1px rgba(0,0,0,0.5) inset;
 }
 
 .footer-content {
 	margin: 0 auto;
 	max-width: 1300px;
+	z-index: 2;
 }
 </style>
 
