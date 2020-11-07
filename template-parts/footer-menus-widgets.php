@@ -51,10 +51,7 @@ if ( $has_footer_menu ) {
 
 <?php if ( $has_sidebar_1 || $has_sidebar_2 ) { ?>
 
-	<aside class="footer-widgets-outer-wrapper" role="complementary">
-
-		<div class="footer-widgets-wrapper">
-
+	<aside class="footer-widgets-columns" role="complementary">
 			<?php if ( $has_sidebar_1 ) { ?>
 
 				<div class="footer-widgets column-one grid-item">
@@ -70,8 +67,6 @@ if ( $has_footer_menu ) {
 				</div>
 
 			<?php } ?>
-
-		</div><!-- .footer-widgets-wrapper -->
 
 	</aside><!-- .footer-widgets-outer-wrapper -->
 

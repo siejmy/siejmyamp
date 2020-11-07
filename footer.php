@@ -1,4 +1,5 @@
 <?php
+require_once(dirname(__FILE__) . '/config.php');
 /**
  * The template for displaying the footer
  *
@@ -17,6 +18,12 @@
 	<div class="footer-shadow"></div>
 	<div class="footer-content">
 		<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
+
+		<p class="footer-info">
+			Copyright &copy; 2019 - <?php echo(date('Y')); ?> by Wydawnictwo Siejmy.
+			Projekt strony internetowej: <a href="https://jedrzej.lewandowski.doctor/">Jędrzej Lewandowski</a>.
+			Zobacz: <a href="<?php echo(Config::$thanksUrl) ?>">Podziękowania</a>, <a href="<?php echo(Config::$privacyUrl) ?>">Polityka prywatności</a>
+		</p>
 	</div>
 </footer><!-- #site-footer -->
 
@@ -25,6 +32,7 @@ footer {
 	display: block;
 	position: relative;
 	margin: 0;
+	margin-top: 9rem;
 	padding: 3rem;
 	width: 100%;
 	background: var(--overlays-bg-dark);
@@ -61,7 +69,7 @@ footer {
 }
 
 .footer-content nav {
-	margin-bottom: 3rem;
+	margin-bottom: 9rem;
 	border-left: 3rem solid var(--color-accent);
 	padding-left: 3rem;
 }
@@ -78,6 +86,21 @@ footer {
 
 .footer-content nav ul li :hover {
 	text-decoration: underline;
+}
+
+.footer-widgets-columns {
+	max-width: 1300px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 8%;
+	margin-bottom: 6rem;
+}
+
+.footer-info {
+	font-size: 12px;
+	display: block;
+	text-align: center;
 }
 </style>
 

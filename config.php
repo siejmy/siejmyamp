@@ -6,4 +6,6 @@ class Config {
   static $twitterUrl = "https://teitter.com/Siejmy";
   static $whoWeAreUrl = "/kim-jestesmy";
   static $contantEmail = "kontakt@siejmy.pl";
+  static $thanksUrl = "/";
+  static $privacyUrl = "/";
 }
