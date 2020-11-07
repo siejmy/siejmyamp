@@ -12,78 +12,67 @@ $has_footer_menu = has_nav_menu( 'footer' );
 
 $has_sidebar_1 = is_active_sidebar( 'sidebar-1' );
 $has_sidebar_2 = is_active_sidebar( 'sidebar-2' );
+?>
 
-// Only output the container if there are elements to display.
-if ( $has_footer_menu || $has_sidebar_1 || $has_sidebar_2 ) {
+
+
+<?php
+
+$footer_top_classes = '';
+
+$footer_top_classes .= $has_footer_menu ? ' has-footer-menu' : '';
+
+if ( $has_footer_menu ) {
 	?>
+	<div class="footer-top<?php echo $footer_top_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
+		<?php if ( $has_footer_menu ) { ?>
 
-	<div class="footer-nav-widgets-wrapper header-footer-group">
+			<nav aria-label="<?php esc_attr_e( 'Footer', 'siejmyamp' ); ?>" role="navigation" class="footer-menu-wrapper">
 
-		<div class="footer-inner section-inner">
+				<ul class="footer-menu reset-list-style">
+					<?php
+					wp_nav_menu(
+						array(
+							'container'      => '',
+							'depth'          => 1,
+							'items_wrap'     => '%3$s',
+							'theme_location' => 'footer',
+						)
+					);
+					?>
+				</ul>
 
-			<?php
+			</nav><!-- .site-nav -->
 
-			$footer_top_classes = '';
+		<?php } ?>
+	</div><!-- .footer-top -->
 
-			$footer_top_classes .= $has_footer_menu ? ' has-footer-menu' : '';
+<?php } ?>
 
-			if ( $has_footer_menu ) {
-				?>
-				<div class="footer-top<?php echo $footer_top_classes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
-					<?php if ( $has_footer_menu ) { ?>
+<?php if ( $has_sidebar_1 || $has_sidebar_2 ) { ?>
 
-						<nav aria-label="<?php esc_attr_e( 'Footer', 'siejmyamp' ); ?>" role="navigation" class="footer-menu-wrapper">
+	<aside class="footer-widgets-outer-wrapper" role="complementary">
 
-							<ul class="footer-menu reset-list-style">
-								<?php
-								wp_nav_menu(
-									array(
-										'container'      => '',
-										'depth'          => 1,
-										'items_wrap'     => '%3$s',
-										'theme_location' => 'footer',
-									)
-								);
-								?>
-							</ul>
+		<div class="footer-widgets-wrapper">
 
-						</nav><!-- .site-nav -->
+			<?php if ( $has_sidebar_1 ) { ?>
 
-					<?php } ?>
-				</div><!-- .footer-top -->
-
-			<?php } ?>
-
-			<?php if ( $has_sidebar_1 || $has_sidebar_2 ) { ?>
-
-				<aside class="footer-widgets-outer-wrapper" role="complementary">
-
-					<div class="footer-widgets-wrapper">
-
-						<?php if ( $has_sidebar_1 ) { ?>
-
-							<div class="footer-widgets column-one grid-item">
-								<?php dynamic_sidebar( 'sidebar-1' ); ?>
-							</div>
-
-						<?php } ?>
-
-						<?php if ( $has_sidebar_2 ) { ?>
-
-							<div class="footer-widgets column-two grid-item">
-								<?php dynamic_sidebar( 'sidebar-2' ); ?>
-							</div>
-
-						<?php } ?>
-
-					</div><!-- .footer-widgets-wrapper -->
-
-				</aside><!-- .footer-widgets-outer-wrapper -->
+				<div class="footer-widgets column-one grid-item">
+					<?php dynamic_sidebar( 'sidebar-1' ); ?>
+				</div>
 
 			<?php } ?>
 
-		</div><!-- .footer-inner -->
+			<?php if ( $has_sidebar_2 ) { ?>
 
-	</div><!-- .footer-nav-widgets-wrapper -->
+				<div class="footer-widgets column-two grid-item">
+					<?php dynamic_sidebar( 'sidebar-2' ); ?>
+				</div>
+
+			<?php } ?>
+
+		</div><!-- .footer-widgets-wrapper -->
+
+	</aside><!-- .footer-widgets-outer-wrapper -->
 
 <?php } ?>

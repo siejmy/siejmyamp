@@ -28,7 +28,7 @@ footer {
 	padding: 3rem;
 	width: 100%;
 	background: var(--overlays-bg-dark);
-	color: white;
+	color: rgba(255, 255, 255, 0.9);
 }
 
 .footer-shadow {
@@ -58,6 +58,26 @@ footer {
 	margin: 0 auto;
 	max-width: 1300px;
 	z-index: 2;
+}
+
+.footer-content nav {
+	margin-bottom: 3rem;
+	border-left: 3rem solid var(--color-accent);
+	padding-left: 3rem;
+}
+
+.footer-content nav ul li {
+	font-weight: 900;
+	display: inline-block;
+	padding-right: 3rem;
+}
+
+.footer-content nav ul li a {
+	text-decoration: none;
+}
+
+.footer-content nav ul li :hover {
+	text-decoration: underline;
 }
 </style>
 
