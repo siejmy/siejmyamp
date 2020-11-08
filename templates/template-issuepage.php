@@ -29,9 +29,10 @@ get_header();
 .site-content-issuepage {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0;
+  padding-top: 0;
   padding-left: 4%;
   padding-right: 4%;
+  padding-bottom: 15rem;
 }
 </style>
 
