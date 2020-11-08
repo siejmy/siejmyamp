@@ -430,3 +430,8 @@ function wpdocs_posts_left() {
   global $wp_query;
   return  $wp_query->post_count - $wp_query->current_post;
 }
+
+function wpdocs_current_post_index() {
+  global $wp_query;
+  return  $wp_query->current_post;
+}

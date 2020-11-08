@@ -7,18 +7,22 @@ $rowTypes = array(
   array('class' => 'ltb', 'column_count' => 3),
 );
 the_post();
-// We show column type based on random generated based on generator seeded
-// with the ID of the first post
-mt_srand(intval(get_the_ID()));
-$rowTypeIndex = mt_rand(0, count($rowTypes) - 1);
-mt_srand();
 
-$postsLeft = wpdocs_posts_left();
-if($postsLeft < $rowTypes[$rowTypeIndex]['column_count']) {
-  foreach($rowTypes as $i => $rowType) {
-    if($rowType['column_count'] == $postsLeft) {
-      $rowTypeIndex = $i;
-      break;
+$rowTypeIndex = 0; // display big ono for first post
+if(wpdocs_current_post_index() > 0) {
+  // We show column type based on random generated based on generator seeded
+  // with the ID of the first post
+  mt_srand(intval(get_the_ID()));
+  $rowTypeIndex = mt_rand(0, count($rowTypes) - 1);
+  mt_srand();
+
+  $postsLeft = wpdocs_posts_left();
+  if($postsLeft < $rowTypes[$rowTypeIndex]['column_count']) {
+    foreach($rowTypes as $i => $rowType) {
+      if($rowType['column_count'] == $postsLeft) {
+        $rowTypeIndex = $i;
+        break;
+      }
     }
   }
 }
