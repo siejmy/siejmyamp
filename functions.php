@@ -618,3 +618,13 @@ function siejmyamp_get_elements_array() {
 	*/
 	return apply_filters( 'siejmyamp_get_elements_array', $elements );
 }
+
+
+/******************************************/
+/* UTILITIES                              */
+/******************************************/
+// Replacement for have_posts() inside while loop
+function wpdocs_posts_left() {
+  global $wp_query;
+  return  $wp_query->post_count - $wp_query->current_post;
+}
