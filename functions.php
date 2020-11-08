@@ -57,21 +57,9 @@ function siejmyamp_theme_support() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// Set post thumbnail size.
-	set_post_thumbnail_size( 1200, 9999 );
-
-	// Add custom image size used in Cover Template.
-	add_image_size( 'siejmyamp-fullscreen', 1980, 9999 );
-
 	// Custom logo.
 	$logo_width  = 120;
 	$logo_height = 90;
-
-	// If the retina setting is active, double the recommended width and height.
-	if ( get_theme_mod( 'retina_logo', false ) ) {
-		$logo_width  = floor( $logo_width * 2 );
-		$logo_height = floor( $logo_height * 2 );
-	}
 
 	add_theme_support(
 		'custom-logo',
@@ -227,61 +215,6 @@ function siejmyamp_menus() {
 
 add_action( 'init', 'siejmyamp_menus' );
 
-/**
- * Get the information about the logo.
- *
- * @param string $html The HTML output from get_custom_logo (core function).
- * @return string
- */
-function siejmyamp_get_custom_logo( $html ) {
-
-	$logo_id = get_theme_mod( 'custom_logo' );
-
-	if ( ! $logo_id ) {
-		return $html;
-	}
-
-	$logo = wp_get_attachment_image_src( $logo_id, 'full' );
-
-	if ( $logo ) {
-		// For clarity.
-		$logo_width  = esc_attr( $logo[1] );
-		$logo_height = esc_attr( $logo[2] );
-
-		// If the retina logo setting is active, reduce the width/height by half.
-		if ( get_theme_mod( 'retina_logo', false ) ) {
-			$logo_width  = floor( $logo_width / 2 );
-			$logo_height = floor( $logo_height / 2 );
-
-			$search = array(
-				'/width=\"\d+\"/iU',
-				'/height=\"\d+\"/iU',
-			);
-
-			$replace = array(
-				"width=\"{$logo_width}\"",
-				"height=\"{$logo_height}\"",
-			);
-
-			// Add a style attribute with the height, or append the height to the style attribute if the style attribute already exists.
-			if ( strpos( $html, ' style=' ) === false ) {
-				$search[]  = '/(src=)/';
-				$replace[] = "style=\"height: {$logo_height}px;\" src=";
-			} else {
-				$search[]  = '/(style="[^"]*)/';
-				$replace[] = "$1 height: {$logo_height}px;";
-			}
-
-			$html = preg_replace( $search, $replace, $html );
-
-		}
-	}
-
-	return $html;
-
-}
-
-add_filter( 'get_custom_logo', 'siejmyamp_get_custom_logo' );
 
 if ( ! function_exists( 'wp_body_open' ) ) {
 
@@ -302,7 +235,7 @@ function siejmyamp_sidebar_registration() {
 
 	// Arguments used in all register_sidebar() calls.
 	$shared_args = array(
-		'before_title'  => '<h2 class="widget-title subheading heading-size-3">',
+		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 		'before_widget' => '<div class="widget %2$s"><div class="widget-content">',
 		'after_widget'  => '</div></div>',
@@ -370,102 +303,10 @@ add_action( 'init', 'siejmyamp_classic_editor_styles' );
  * Add custom colors and font sizes to the block editor.
  */
 function siejmyamp_block_editor_settings() {
-
-	// Block Editor Palette.
-	$editor_color_palette = array(
-		array(
-			'name'  => __( 'Accent Color', 'siejmyamp' ),
-			'slug'  => 'accent',
-			'color' => siejmyamp_get_color_for_area( 'content', 'accent' ),
-		),
-		array(
-			'name'  => __( 'Primary', 'siejmyamp' ),
-			'slug'  => 'primary',
-			'color' => siejmyamp_get_color_for_area( 'content', 'text' ),
-		),
-		array(
-			'name'  => __( 'Secondary', 'siejmyamp' ),
-			'slug'  => 'secondary',
-			'color' => siejmyamp_get_color_for_area( 'content', 'secondary' ),
-		),
-		array(
-			'name'  => __( 'Subtle Background', 'siejmyamp' ),
-			'slug'  => 'subtle-background',
-			'color' => siejmyamp_get_color_for_area( 'content', 'borders' ),
-		),
-	);
-
-	// Add the background option.
-	$background_color = get_theme_mod( 'background_color' );
-	if ( ! $background_color ) {
-		$background_color_arr = get_theme_support( 'custom-background' );
-		$background_color     = $background_color_arr[0]['default-color'];
-	}
-	$editor_color_palette[] = array(
-		'name'  => __( 'Background Color', 'siejmyamp' ),
-		'slug'  => 'background',
-		'color' => '#' . $background_color,
-	);
-
-	// If we have accent colors, add them to the block editor palette.
-	if ( $editor_color_palette ) {
-		add_theme_support( 'editor-color-palette', $editor_color_palette );
-	}
-
-	// Block Editor Font Sizes.
-	add_theme_support(
-		'editor-font-sizes',
-		array(
-			array(
-				'name'      => _x( 'Small', 'Name of the small font size in the block editor', 'siejmyamp' ),
-				'shortName' => _x( 'S', 'Short name of the small font size in the block editor.', 'siejmyamp' ),
-				'size'      => 18,
-				'slug'      => 'small',
-			),
-			array(
-				'name'      => _x( 'Regular', 'Name of the regular font size in the block editor', 'siejmyamp' ),
-				'shortName' => _x( 'M', 'Short name of the regular font size in the block editor.', 'siejmyamp' ),
-				'size'      => 21,
-				'slug'      => 'normal',
-			),
-			array(
-				'name'      => _x( 'Large', 'Name of the large font size in the block editor', 'siejmyamp' ),
-				'shortName' => _x( 'L', 'Short name of the large font size in the block editor.', 'siejmyamp' ),
-				'size'      => 26.25,
-				'slug'      => 'large',
-			),
-			array(
-				'name'      => _x( 'Larger', 'Name of the larger font size in the block editor', 'siejmyamp' ),
-				'shortName' => _x( 'XL', 'Short name of the larger font size in the block editor.', 'siejmyamp' ),
-				'size'      => 32,
-				'slug'      => 'larger',
-			),
-		)
-	);
-
 	add_theme_support( 'editor-styles' );
-
-	// If we have a dark background color then add support for dark editor style.
-	// We can determine if the background color is dark by checking if the text-color is white.
-	if ( '#ffffff' === strtolower( siejmyamp_get_color_for_area( 'content', 'text' ) ) ) {
-		add_theme_support( 'dark-editor-style' );
-	}
-
 }
 
 add_action( 'after_setup_theme', 'siejmyamp_block_editor_settings' );
-
-/**
- * Overwrite default more tag with styling and screen reader markup.
- *
- * @param string $html The default output HTML for the more tag.
- * @return string
- */
-function siejmyamp_read_more_tag( $html ) {
-	return preg_replace( '/<a(.*)>(.*)<\/a>/iU', sprintf( '<div class="read-more-button-wrap"><a$1><span class="faux-button">$2</span> <span class="screen-reader-text">"%1$s"</span></a></div>', get_the_title( get_the_ID() ) ), $html );
-}
-
-add_filter( 'the_content_more_link', 'siejmyamp_read_more_tag' );
 
 /**
  * Enqueues scripts for customizer controls & settings.
@@ -505,45 +346,6 @@ function siejmyamp_customize_preview_init() {
 }
 
 add_action( 'customize_preview_init', 'siejmyamp_customize_preview_init' );
-
-/**
- * Get accessible color for an area.
- *
- * @since SiejmyAMP 1.0
- *
- * @param string $area The area we want to get the colors for.
- * @param string $context Can be 'text' or 'accent'.
- * @return string Returns a HEX color.
- */
-function siejmyamp_get_color_for_area( $area = 'content', $context = 'text' ) {
-
-	// Get the value from the theme-mod.
-	$settings = get_theme_mod(
-		'accent_accessible_colors',
-		array(
-			'content'       => array(
-				'text'      => '#000000',
-				'accent'    => '#cd2653',
-				'secondary' => '#6d6d6d',
-				'borders'   => '#dcd7ca',
-			),
-			'header-footer' => array(
-				'text'      => '#000000',
-				'accent'    => '#cd2653',
-				'secondary' => '#6d6d6d',
-				'borders'   => '#dcd7ca',
-			),
-		)
-	);
-
-	// If we have a value return it.
-	if ( isset( $settings[ $area ] ) && isset( $settings[ $area ][ $context ] ) ) {
-		return $settings[ $area ][ $context ];
-	}
-
-	// Return false if the option doesn't exist.
-	return false;
-}
 
 /**
  * Get an array of elements.
