@@ -1,3 +1,4 @@
+<div class="scrollpicker_prnt">
 <div class="scrollpicker-block">
   <h2 class="h6">E-czasopismo siejmy</h2>
 <?php
@@ -40,7 +41,12 @@
 </amp-inline-gallery>
 <div class="bottom-shadow-line"></div>
 </div>
+</div>
 <style>
+  .scrollpicker_prnt {
+    width: 100%;
+  }
+
   .scrollpicker-block {
     width: 100%;
     box-sizing: border-box;
@@ -99,18 +105,13 @@
     line-height: 12px;
     padding: 3px;
   }
-
   @media (min-width: 768px) {
-    .scrollpicker-block {
-      max-width: 800px;
+    .scrollpicker_prnt {
+      max-width: 1300px;
       margin: 0 auto;
       margin-bottom: 4%;
-      background: white;
-      box-shadow: 0 0 0;
-    }
-
-    .scrollpicker-block .bottom-shadow-line {
-      box-shadow: 0 0 0;
+      padding-left: 4%;
+      padding-right: 4%;
     }
   }
 </style>
