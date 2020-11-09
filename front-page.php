@@ -14,6 +14,8 @@ get_header();
 <?php include(dirname(__FILE__) . '/parts/headers/home.php'); ?>
 
 <main id="site-content" role="main">
+	<?php include(dirname(__FILE__) . '/issue-scrollpicker.php'); ?>
+
 	<?php
 
 	if ( have_posts() ) {
