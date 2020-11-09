@@ -122,6 +122,19 @@ function siejmyamp_theme_support() {
 
 }
 
+function siejmyamp_headers() {
+	header( 'Link: <https://cdn.ampproject.org/v0.js>; rel=preload; as=script' , false);
+	header( 'Link: <https://cdn.ampproject.org/v0/amp-analytics-0.1.js>; rel=preload; as=script' , false);
+	header( 'Link: <https://fonts.googleapis.com/css2?family=Lato%3Aital%2Cwght%400%2C100%3B0%2C300%3B0%2C400%3B0%2C900%3B1%2C300&display=swap&ver=1>; rel=preload; as=style; crossorigin=anonymous' , false);
+	header( 'Link: <https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js>; rel=preload; as=script' , false);
+	header( 'Link: <https://cdn.ampproject.org/v0/amp-consent-0.1.js>; rel=preload; as=script' , false);
+	header( 'Link: <https://cdn.ampproject.org/v0/amp-inline-gallery-0.1.js>; rel=preload; as=script' , false);
+	header( 'Link: <https://cdn.ampproject.org/v0/amp-sidebar-0.1.js>; rel=preload; as=script' , false);
+}
+
+add_action( 'send_headers', 'siejmyamp_headers' );
+
+
 add_action( 'after_setup_theme', 'siejmyamp_theme_support' );
 
 /**
