@@ -15,12 +15,6 @@ get_header();
 
 <main id="site-content" role="main">
 	<?php
-	require_once( ABSPATH . 'wp-content/plugins/issuepage-plugin/classes/ScrollpickerRenderer.php');
-	$scrollpickerRenderer = new ScrollpickerRenderer();
-	echo $scrollpickerRenderer->render();
-	?>
-
-	<?php
 
 	if ( have_posts() ) {
 
