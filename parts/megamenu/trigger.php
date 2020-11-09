@@ -7,7 +7,7 @@
         alt="Menu"
         class="icon"
         noloading
-      />
+      ></amp-img>
   </div>
 </div>
 <style>
