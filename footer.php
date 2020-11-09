@@ -23,6 +23,7 @@ require_once(dirname(__FILE__) . '/config.php');
 			Copyright &copy; 2019 - <?php echo(date('Y')); ?> by Wydawnictwo Siejmy.
 			Projekt strony internetowej: <a href="https://jedrzej.lewandowski.doctor/">Jędrzej Lewandowski</a>.
 			Zobacz: <a href="<?php echo(Config::$thanksUrl) ?>">Podziękowania</a>, <a href="<?php echo(Config::$privacyUrl) ?>">Polityka prywatności</a>
+			<?php include(dirname(__FILE__) . '/parts/analytics/update-consent-btn.php') ?>
 		</p>
 	</div>
 </footer><!-- #site-footer -->
@@ -105,6 +106,6 @@ footer {
 </style>
 
 <?php wp_footer(); ?>
-
+<?php include(dirname(__FILE__) . '/parts/analytics/analytics.php') ?>
 </body>
 </html>
