@@ -92,9 +92,10 @@ footer {
 .footer-widgets-columns {
 	max-width: 1300px;
 	margin: 0 auto;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	column-gap: 8%;
+	margin-bottom: 6rem;
+}
+
+.footer-widgets-columns .widget {
 	margin-bottom: 6rem;
 }
 
@@ -102,6 +103,17 @@ footer {
 	font-size: 12px;
 	display: block;
 	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.footer-widgets-columns {
+	max-width: 1300px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 8%;
+	margin-bottom: 6rem;
+}
 }
 </style>
 
