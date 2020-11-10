@@ -37,6 +37,8 @@
   }
 
   #consent-ui p {
+    margin: 0 auto;
+    max-width: var(--text-column-width);
     margin-bottom: 1rem;
     font-size: 14px;
     line-height: 20px;

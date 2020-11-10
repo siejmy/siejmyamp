@@ -88,6 +88,7 @@ h6 {
   --color-text-auxillary: #777;
   --overlays-bg-dark: rgba(3, 4, 40, 0.85);
   --overlays-bg-dark-opaque: rgba(3, 4, 40, 1);
+  --text-column-width: 680px;
 }
 
 /* -------------------------------------------------------------------------- */
