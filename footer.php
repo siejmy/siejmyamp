@@ -36,7 +36,7 @@ footer {
 	margin-top: 9rem;
 	padding: 3rem;
 	width: 100%;
-	background: var(--overlays-bg-dark);
+	background: var(--overlays-bg-dark-opaque);
 	color: rgba(255, 255, 255, 0.9);
 }
 
