@@ -2,8 +2,8 @@
   <div class="trigger" on="tap:megamenu-sidebar.toggle">
     <amp-img
         src="<?php bloginfo('template_url'); ?>/assets/icons/bars.svg"
-        width="24"
-        height="24"
+        width="26"
+        height="26"
         alt="Menu"
         class="icon"
         noloading
@@ -23,7 +23,7 @@
 .megamenu-section .trigger {
   display: inline-block;
   vertical-align: top;
-  margin: 5px 5px 5px 5px;
+  margin: 4px 5px 5px 5px;
 }
 
 .megamenu-section .trigger .icon {

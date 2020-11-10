@@ -4,8 +4,8 @@
   <a href="<?php echo(Config::$facebookUrl) ?>">
     <amp-img
       src="<?php bloginfo('template_url'); ?>/assets/icons/facebook-square.svg"
-      width="24"
-      height="24"
+      width="26"
+      height="26"
       alt="Facebook siejmy"
       class="icon"
       noloading
@@ -14,8 +14,8 @@
   <a href="<?php echo(Config::$instagramUrl) ?>">
     <amp-img
       src="<?php bloginfo('template_url'); ?>/assets/icons/instagram.svg"
-      width="24"
-      height="24"
+      width="26"
+      height="26"
       alt="Instagram siejmy"
       class="icon"
       noloading
@@ -24,8 +24,8 @@
   <a href="<?php echo(Config::$twitterUrl) ?>">
     <amp-img
       src="<?php bloginfo('template_url'); ?>/assets/icons/twitter.svg"
-      width="24"
-      height="24"
+      width="26"
+      height="26"
       alt="Twitter siejmy"
       class="icon"
       noloading
@@ -47,6 +47,6 @@
 
 .socico-horizontal a .icon {
   opacity: 0.5;
-  margin: 5px 0 5px 5px;
+  margin: 4px 0 7px 7px;
 }
 </style>

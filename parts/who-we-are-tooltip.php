@@ -9,7 +9,7 @@
 .who-we-are-tooltip {
   display: inline-block;
   vertical-align: top;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-text-auxillary);
   margin: 0px 10px;
 }
@@ -17,7 +17,7 @@
 .who-we-are-tooltip span {
   display: block;
 	text-align: center;
-	line-height: 14px;
+	line-height: 16px;
   background: white;
   border: 1px solid #ccc;
   border-radius: 4px;
