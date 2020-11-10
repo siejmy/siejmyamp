@@ -602,25 +602,6 @@ function siejmyamp_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 add_filter( 'walker_nav_menu_start_el', 'siejmyamp_nav_menu_social_icons', 10, 4 );
 
 /**
- * Classes
- */
-
-/**
- * Adds 'no-js' class.
- *
- * If we're missing JavaScript support, the HTML element will have a 'no-js' class.
- */
-function siejmyamp_no_js_class() {
-
-	?>
-	<script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script>
-	<?php
-
-}
-
-add_action( 'wp_head', 'siejmyamp_no_js_class' );
-
-/**
  * Adds conditional body classes.
  *
  * @param array $classes Classes added to the body tag.
