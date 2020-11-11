@@ -24,7 +24,9 @@
 
 <style>
   .header-single {
+    margin: 0 auto;
     width: 100%;
+    max-width: 1500px;
     display: flex;
     justify-content: space-between;
     align-items: center;

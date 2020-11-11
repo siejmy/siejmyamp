@@ -2,28 +2,12 @@
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 <?php
-require_once( ABSPATH . 'wp-content/plugins/siejmycommon-plugin/classes/ImageRenderer.php');
-$imgRenderer = new ImageRenderer();
-
-$alt = $post->post_title;
 $mediaId = get_post_thumbnail_id($post);
-$link = get_post_permalink($post);
-echo $imgRenderer->renderImageHero(array(
-  'mediaId' => $mediaId,
-  'href' => $link,
-  'alt' => $alt,
-  'elementId' => 'mainpost_' . $post->ID,
-));
-?>
-
-<?php
-get_template_part( 'template-parts/entry-header' );
-
-if ( ! is_search() ) {
-  get_template_part( 'template-parts/featured-image' );
+if(!empty($mediaId)) {
+  include(dirname(__FILE__) . '/header-media.php');
 }
-
 ?>
+
 
 <div class="post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
 
