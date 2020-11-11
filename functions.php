@@ -169,10 +169,6 @@ function siejmyamp_register_styles() {
 	wp_enqueue_style('font-lato', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,300&display=swap', array(), '1');
 
 	wp_enqueue_style( 'siejmyamp-style', get_stylesheet_uri(), array(), $theme_version );
-
-	// Add print CSS.
-	wp_enqueue_style( 'siejmyamp-print-style', get_template_directory_uri() . '/print.css', null, $theme_version, 'print' );
-
 }
 
 add_action( 'wp_enqueue_scripts', 'siejmyamp_register_styles' );
