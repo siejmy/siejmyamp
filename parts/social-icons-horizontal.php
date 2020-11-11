@@ -36,8 +36,6 @@
 .socico-horizontal {
   display: inline-block;
   vertical-align: top;
-  padding-top: 5px;
-  padding-left: 5px;
 }
 
 .socico-horizontal a {

@@ -15,5 +15,12 @@
 
   .header-subline .megamenu-section {
     float: right;
+    padding-top: 5px;
+    padding-right: 5px;
+  }
+
+  .socico-horizontal {
+    padding-top: 5px;
+    padding-left: 5px;
   }
 </style>

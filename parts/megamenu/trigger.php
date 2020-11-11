@@ -14,8 +14,6 @@
 .megamenu-section {
   display: inline-block;
   vertical-align: top;
-  padding-top: 5px;
-  padding-right: 5px;
   width: max-content;
   text-align: right;
 }

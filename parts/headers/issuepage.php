@@ -106,4 +106,9 @@
       line-height: 36px;
     }
   }
+
+  .megamenu-section {
+    padding-top: 5px;
+    padding-right: 5px;
+  }
 </style>
