@@ -3,7 +3,9 @@
 
 <?php
 $mediaId = get_post_thumbnail_id($post);
-if(!empty($mediaId)) {
+if(empty($mediaId)) {
+  include(dirname(__FILE__) . '/header-nomedia.php');
+} else {
   include(dirname(__FILE__) . '/header-media.php');
 }
 ?>

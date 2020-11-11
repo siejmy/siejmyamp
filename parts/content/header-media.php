@@ -4,6 +4,10 @@ require_once( ABSPATH . 'wp-content/plugins/siejmycommon-plugin/classes/HeroCapt
 $imgRenderer = new ImageRenderer();
 $captionRenderer = new HeroCaptionRenderer();
 
+$caption = $captionRenderer->render($post, array(
+  'titleTag' => 'h1',
+));
+
 $alt = $post->post_title;
 $mediaId = get_post_thumbnail_id($post);
 $link = get_post_permalink($post);
@@ -17,7 +21,7 @@ echo $imgRenderer->renderImageHero(array(
   'cssClass' => 'posthero',
   'layout' => 'responsive',
   'elementId' => 'mainpost_' . $post->ID,
-  'caption' => $captionRenderer->render($post),
+  'caption' => $caption,
 ));
 ?>
 
@@ -60,7 +64,7 @@ echo $imgRenderer->renderImageHero(array(
 .posthero::after {
 	content: "";
 	position: absolute;
-	height: 20%;
+	height: 50%;
 	width: 100%;
 	bottom: 0;
 	left: 0;
