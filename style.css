@@ -218,3 +218,19 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+/* -------------------------------------------------------------------------- */
+/*	Content
+/* -------------------------------------------------------------------------- */
+
+figure {
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+figure figcaption {
+  font-size: 1.6em;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}

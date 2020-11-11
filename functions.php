@@ -57,20 +57,6 @@ function siejmyamp_theme_support() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// Custom logo.
-	$logo_width  = 120;
-	$logo_height = 90;
-
-	add_theme_support(
-		'custom-logo',
-		array(
-			'height'      => $logo_height,
-			'width'       => $logo_width,
-			'flex-height' => true,
-			'flex-width'  => true,
-		)
-	);
-
 	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
