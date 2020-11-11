@@ -29,7 +29,7 @@ echo $imgRenderer->renderImageHero(array(
 .posthero {
   margin: 0 auto;
   width: 100%;
-  max-width: 1300px;
+  max-width: 1400px;
   position: relative;
 }
 
@@ -44,7 +44,7 @@ echo $imgRenderer->renderImageHero(array(
 @media(min-width: 768px) {
   .posthero amp-img {
     height: 66vw; /* 1/2 since the image occupies the full viewport */
-    max-height: 867px; /* 1300*2/3=867px */
+    max-height: 933px; /* 1400*2/3=933px */
   }
 }
 
