@@ -38,6 +38,7 @@ footer {
 	width: 100%;
 	background: var(--overlays-bg-dark-opaque);
 	color: rgba(255, 255, 255, 0.9);
+	z-index: var(--z-index-above-sticky);
 }
 
 .footer-shadow {

@@ -16,7 +16,7 @@ $w = $mediaObj[1];
 $h = $mediaObj[2];
 echo $imgRenderer->renderImageHero(array(
   'mediaId' => $mediaId,
-  'tag' => 'div',
+  'tag' => 'header',
   'alt' => $alt,
   'cssClass' => 'posthero',
   'layout' => 'responsive',
@@ -31,6 +31,7 @@ echo $imgRenderer->renderImageHero(array(
   width: 100%;
   max-width: 1400px;
   position: relative;
+  background: white;
 }
 
 .posthero amp-img img {

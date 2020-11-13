@@ -10,10 +10,10 @@
       alt="Logo siejmy"
       noloading
     />
-    <span>
-        <h1>Siejmy</h1>
-        <h2>Portal Katolicki</h2>
-    </span>
+    <h1>
+        <span class="title">Siejmy</span>
+        <span class="subtitle">Portal Katolicki</span>
+    </h1>
   </a>
 </header>
 <style>
@@ -26,6 +26,7 @@
   .header-home a {
     display: block;
     margin: 0 auto;
+    width: -moz-fit-content;
     width: fit-content;
     padding-top: 22.5px;
     color: white;
@@ -39,12 +40,15 @@
     margin-right: 2px;
   }
 
-  .header-home a span {
+  .header-home a h1 {
     display: inline-block;
-    vertical-align:top;
+    vertical-align: top;
+    margin-top: 0;
+    padding-top: 0;
+    margin-top: -5px;
   }
 
-  .header-home h1, .header-home h2  {
+  .header-home h1 .title, .header-home h1 .subtitle  {
     display: block;
     margin: 0;
     padding: 0;
@@ -52,14 +56,13 @@
 
   }
 
-  .header-home h1 {
+  .header-home .title {
     font-weight: 300;
     font-size: 60px;
     line-height: 60px;
-    margin-top: -5px;
   }
 
-  .header-home h2 {
+  .header-home .subtitle {
     font-weight: 300;
     font-size: 17px;
     line-height: 22px;

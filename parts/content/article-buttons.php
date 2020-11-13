@@ -47,21 +47,6 @@
 </aside>
 <style>
 .artbtns {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 4rem;
-  z-index: var(--z-index-sticky);
-
-  display: flex;
-  flex-direction: row nowrap;
-  justify-content: space-evenly;
-  align-items: center;
-
-
-  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.8);
-  background: white;
 }
 
 .artbtns .title {

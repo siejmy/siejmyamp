@@ -381,6 +381,9 @@ function siejmyamp_get_elements_array() {
 	return apply_filters( 'siejmyamp_get_elements_array', $elements );
 }
 
+/******************************************/
+/* User role                              */
+/******************************************/
 //Let Contributor Role to Upload Media
 if ( current_user_can('contributor') && !current_user_can('upload_files') )
     add_action('admin_init', 'allow_contributor_uploads');
@@ -388,6 +391,28 @@ function allow_contributor_uploads() {
     $contributor = get_role('contributor');
     $contributor->add_cap('upload_files');
 }
+
+/******************************************/
+/* Admin welcome                          */
+/******************************************/
+require_once(dirname(__FILE__) . '/inc/admin/siejmy-admin-dashboard-widget.php');
+require_once(dirname(__FILE__) . '/inc/admin/hollyquote_metabox_html.php');
+add_action('wp_dashboard_setup', 'siejmy_dashboard_widgets');
+
+function siejmy_dashboard_widgets() {
+	global $wp_meta_boxes;
+	wp_add_dashboard_widget('siejmy_dashboard_widget', '#siewcySIEJMY', 'siejmy_dashboard_widget_render');
+}
+
+function hollyquote_add_metaboxes() {
+	add_meta_box(
+			'hollyquote_metabox',                 // Unique ID
+			'Święty cytat',      // Box title
+			'hollyquote_metabox_html',  // Content callback, must be of type callable
+			'post'                           // Post type
+	);
+}
+add_action( 'add_meta_boxes', 'hollyquote_add_metaboxes' );
 
 
 /******************************************/

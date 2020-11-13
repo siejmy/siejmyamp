@@ -19,7 +19,7 @@ get_header();
 
 <?php include(dirname(__FILE__) . '/parts/headers/home.php'); ?>
 
-<main id="site-content" role="main">
+<main id="site-content" class="sc-index" role="main">
 	<?php get_template_part( 'template-parts/archive-title' ); ?>
 
 	<?php
@@ -32,8 +32,7 @@ get_header();
 	?>
 
 	<?php get_template_part( 'template-parts/pagination' ); ?>
-
-</main><!-- #site-content -->
+</main>
 
 <?php
 get_footer();

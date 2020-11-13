@@ -2,11 +2,11 @@
 
 <?php include(dirname(__FILE__) . '/../megamenu/menu.php') ?>
 
-<div class="header-subline">
+<aside class="header-subline">
   <?php include(dirname(__FILE__) . '/../social-icons-horizontal.php') ?>
   <?php include(dirname(__FILE__) . '/../who-we-are-tooltip.php') ?>
   <?php include(dirname(__FILE__) . '/../megamenu/trigger.php') ?>
-</div>
+</aside>
 <style>
   .header-subline {
     width: 100%;

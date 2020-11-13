@@ -24,6 +24,8 @@
 
 <style>
   .header-single {
+    z-index: var(--z-index-above-sticky);
+    position:relative;
     margin: 0 auto;
     width: 100%;
     max-width: 1500px;
@@ -31,6 +33,7 @@
     justify-content: space-between;
     align-items: center;
     height: 9rem;
+    background: white;
   }
 
   .header-single > * {
@@ -59,7 +62,7 @@
     display: block;
     width: 100px;
     height: 100px;
-    z-index: 3;
+      z-index: var(--z-index-above-sticky);
     text-align: center;
     text-decoration: none;
   }

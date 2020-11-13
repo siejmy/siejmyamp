@@ -89,6 +89,9 @@ h6 {
   --overlays-bg-dark: rgba(3, 4, 40, 0.85);
   --overlays-bg-dark-opaque: rgba(3, 4, 40, 1);
   --text-column-width: 680px;
+
+  --z-index-above-sticky: 6;
+  --z-index-sticky: 4;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -233,4 +236,29 @@ figure figcaption {
   line-height: 3rem;
   margin-bottom: 3rem;
   font-weight: 300;
+}
+
+blockquote {
+  border-left: 1rem solid var(--color-accent);
+  padding-left: 2rem;
+  margin-left: 0;
+  margin-bottom: 3rem;
+  line-height: 3rem;
+}
+
+blockquote p {
+  font-size: 3.2em;
+  line-height: 6rem;
+  font-weight: 100;
+}
+
+blockquote cite {
+  margin: 0;
+  font-weight: 100;
+  margin-left: 3rem;
+  font-style: italic;
+  font-size: 1.5em;
+  text-align: right;
+  width: 100%;
+  display: block;
 }
