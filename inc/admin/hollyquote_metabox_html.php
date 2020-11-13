@@ -2,7 +2,7 @@
 require_once(dirname(__FILE__) . '/admin-random-bible-quote-widget.php');
 
 function hollyquote_metabox_html($post) {
-  echo '<p class="siejmy_quote">' . admin_random_bible_quote_widget() . '</p>'
+  echo '<div><p class="siejmy_quote">' . admin_random_bible_quote_widget() . '</p>'
   . '<style>
         .siejmy_quote { background: #2A3189; padding: 40px; color: white; min-height: 120px; margin-top: 3rem; }
         .siejmy_quote .siejmybtn {
@@ -19,5 +19,5 @@ function hollyquote_metabox_html($post) {
           margin-bottom: 20px;
           clear: both;
         }
-     </style>';
+     </style></div>';
 }
