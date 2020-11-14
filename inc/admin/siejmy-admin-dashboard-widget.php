@@ -7,6 +7,7 @@ function siejmy_dashboard_widget_render() {
 		 . '<h1><strong>Naszym światłem jest <span class="siejmyg">prawda</span>, celem <span class="siejmyg">apostolstwo</span>, a główną siłą <span class="siejmyg">miłość</span>.</strong></h1>'
 		 . '<h2 style="text-align: center; margin-bottom: 0; padding-bottom: 0; margin-top: 2rem;">Nadcel</h2>'
 		 . '<p style="background: #3ace00; color: white; font-size: 1.5em; padding: 0.25em;">Przyczynianie się do poznania i przyjęcia wartości katolickich przez młodych ludzi.</p>'
+		 . '<p class="siejmy_quote">' . admin_random_bible_quote_widget() . '</p>'
 		 . '<h2 style="margin-top: 3rem;">Cele podstawowe</h2>'
 		 . '<ol>'
 		 .   '<li>Przedstawianie całościowego programu społecznego w duchu katolickim dla młodych ludzi.</li>'
@@ -18,7 +19,6 @@ function siejmy_dashboard_widget_render() {
 		 .   '<li>Rozpoznawalność SIEJMY przez każdą osobę aktywnie działającą w internecie w Polsce.</li>'
 		 .   '<li>Zdobycie środków finansowych zarówno poprzez działalność gospodarczą, jak i dobroczynność, zapewniających stabilne funkcjonowanie i rozwój.</li>'
 		 . '</ol>'
-		 . '<p class="siejmy_quote">' . admin_random_bible_quote_widget() . '</p>'
 		 . '<style>
 					 .siejmyg { color: #3ace00; }
 					 .siejmy_quote { background: #2A3189; padding: 40px; color: white; min-height: 120px; margin-top: 3rem; }
