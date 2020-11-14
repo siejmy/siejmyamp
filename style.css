@@ -222,6 +222,24 @@ a:hover {
   text-decoration: none;
 }
 
+ul,
+ol {
+  margin-left: 3rem;
+  margin-right: 1rem;
+}
+ul li,
+ol li {
+  margin-bottom: 3rem;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+
 /* -------------------------------------------------------------------------- */
 /*	Content
 /* -------------------------------------------------------------------------- */
