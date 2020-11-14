@@ -10,7 +10,12 @@
 <style>
   .header-subline {
     width: 100%;
-    height: 9rem;
+    height: 6rem;
+    float: left;
+    z-index: 5;
+    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   }
 
   .header-subline .megamenu-section {

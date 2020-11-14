@@ -45,7 +45,7 @@ echo $imgRenderer->renderImageHero(array(
 @media(min-width: 768px) {
   .posthero amp-img {
     height: 66vw; /* 1/2 since the image occupies the full viewport */
-    max-height: 933px; /* 1400*2/3=933px */
+    max-height: 75vh; /* title must be visible */
   }
 }
 
