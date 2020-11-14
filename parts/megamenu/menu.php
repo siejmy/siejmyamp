@@ -25,6 +25,10 @@ if ( has_nav_menu( 'megamenu' ) ) {
   font-weight: 100;
 }
 
+.megamenu-sidebar ul {
+  list-style-type: none;
+}
+
 .megamenu-sidebar li {
   margin-bottom: 3rem;
   text-align: right;
