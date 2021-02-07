@@ -27,7 +27,7 @@ get_header();
 </main><!-- #site-content -->
 <style>
 .site-content-issuepage {
-  max-width: 1300px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
   padding-top: 0;
   padding-left: 4%;

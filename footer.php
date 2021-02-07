@@ -66,7 +66,7 @@ footer {
 
 .footer-content {
 	margin: 0 auto;
-	max-width: 1300px;
+	max-width: var(--content-max-width);
 	z-index: 2;
 }
 
@@ -91,7 +91,7 @@ footer {
 }
 
 .footer-widgets-columns {
-	max-width: 1300px;
+	max-width: var(--content-max-width);
 	margin: 0 auto;
 	margin-bottom: 6rem;
 }
@@ -108,7 +108,7 @@ footer {
 
 @media (min-width: 768px) {
 	.footer-widgets-columns {
-	max-width: 1300px;
+	max-width: var(--content-max-width);
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
