@@ -5,7 +5,6 @@
  *
  * @package WordPress
  * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
  */
 
 $has_footer_menu = has_nav_menu( 'footer' );

@@ -1,14 +1,6 @@
 <?php
  require_once(dirname(__FILE__) . '/config.php');
 
-/**
- * The template for displaying the 404 template in the SiejmyAMP theme.
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
- */
-
 get_header();
 ?>
 

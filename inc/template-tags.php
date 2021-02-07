@@ -4,7 +4,6 @@
  *
  * @package WordPress
  * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
  */
 
 /**
@@ -105,7 +104,6 @@ function siejmyamp_site_description( $echo = true ) {
 	/**
 	 * Filters the HTML for the site description.
 	 *
-	 * @since SiejmyAMP 1.0
 	 *
 	 * @param string $html         The HTML to display.
 	 * @param string $description  Site description via `bloginfo()`.
@@ -239,7 +237,6 @@ function siejmyamp_get_post_meta( $post_id = null, $location = 'single-top' ) {
 	 * This filter can be used to hide post meta information of post, page or custom post type
 	 * registered by child themes or plugins.
 	 *
-	 * @since SiejmyAMP 1.0
 	 *
 	 * @param array Array of post types
 	 */
@@ -260,7 +257,6 @@ function siejmyamp_get_post_meta( $post_id = null, $location = 'single-top' ) {
 		 *
 		 * Use this filter to hide post meta information like Author, Post date, Comments, Is sticky status.
 		 *
-		 * @since SiejmyAMP 1.0
 		 *
 		 * @param array $args {
 		 *  @type string 'author'
@@ -288,7 +284,6 @@ function siejmyamp_get_post_meta( $post_id = null, $location = 'single-top' ) {
 		 *
 		 * Use this filter to hide post tags.
 		 *
-		 * @since SiejmyAMP 1.0
 		 *
 		 * @param array $args {
 		 *   @type string 'tags'
@@ -330,8 +325,6 @@ function siejmyamp_get_post_meta( $post_id = null, $location = 'single-top' ) {
 				 *
 				 * Allow output of additional post meta info to be added by child themes and plugins.
 				 *
-				 * @since SiejmyAMP 1.0
-				 * @since SiejmyAMP 1.1 Added the `$post_meta` and `$location` parameters.
 				 *
 				 * @param int    $post_id   Post ID.
 				 * @param array  $post_meta An array of post meta information.
@@ -457,8 +450,6 @@ function siejmyamp_get_post_meta( $post_id = null, $location = 'single-top' ) {
 				 *
 				 * Allow output of additional post meta info to be added by child themes and plugins.
 				 *
-				 * @since SiejmyAMP 1.0
-				 * @since SiejmyAMP 1.1 Added the `$post_meta` and `$location` parameters.
 				 *
 				 * @param int    $post_id   Post ID.
 				 * @param array  $post_meta An array of post meta information.
@@ -743,7 +734,6 @@ function siejmyamp_toggle_duration() {
 	/**
 	 * Filters the animation duration/speed used usually for submenu toggles.
 	 *
-	 * @since SiejmyAMP 1.0
 	 *
 	 * @param int $duration Duration in milliseconds.
 	 */

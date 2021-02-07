@@ -6,7 +6,6 @@
  *
  * @package WordPress
  * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
  */
 
 ?><!DOCTYPE html>

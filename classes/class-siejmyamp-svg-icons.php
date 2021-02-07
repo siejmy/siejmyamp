@@ -4,7 +4,6 @@
  *
  * @package WordPress
  * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
  */
 
 if ( ! class_exists( 'TwentyTwenty_SVG_Icons' ) ) {
@@ -36,7 +35,6 @@ if ( ! class_exists( 'TwentyTwenty_SVG_Icons' ) ) {
 			 * The dynamic portion of the hook name, `$group`, refers to
 			 * the name of the group of icons, either "ui" or "social".
 			 *
-			 * @since SiejmyAMP 1.5
 			 *
 			 * @param array $arr Array of icons.
 			 */
@@ -45,7 +43,6 @@ if ( ! class_exists( 'TwentyTwenty_SVG_Icons' ) ) {
 			/**
 			 * Filters an SVG icon's color.
 			 *
-			 * @since SiejmyAMP 1.5
 			 *
 			 * @param string $color The icon color.
 			 * @param string $icon  The icon name.
@@ -82,7 +79,6 @@ if ( ! class_exists( 'TwentyTwenty_SVG_Icons' ) ) {
 				 * By default, each Icon ID is matched against a .com TLD. To override this behavior,
 				 * specify all the domains it covers (including the .com TLD too, if applicable).
 				 *
-				 * @since SiejmyAMP 1.5
 				 *
 				 * @param array $social_icons_map Array of default social icons.
 				 */
@@ -91,7 +87,6 @@ if ( ! class_exists( 'TwentyTwenty_SVG_Icons' ) ) {
 				/**
 				 * Filters SiejmyAMP's array of social icons.
 				 *
-				 * @since SiejmyAMP 1.5
 				 *
 				 * @param array $social_icons Array of default social icons.
 				 */

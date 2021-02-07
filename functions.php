@@ -1,15 +1,5 @@
 <?php
 /**
- * SiejmyAMP functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
- */
-
-/**
  * Table of Contents:
  * Theme Support
  * Required Files
@@ -271,8 +261,6 @@ add_action( 'after_setup_theme', 'siejmyamp_block_editor_settings' );
 /**
  * Enqueues scripts for customizer controls & settings.
  *
- * @since SiejmyAMP 1.0
- *
  * @return void
  */
 function siejmyamp_customize_controls_enqueue_scripts() {
@@ -292,9 +280,6 @@ add_action( 'customize_controls_enqueue_scripts', 'siejmyamp_customize_controls_
 
 /**
  * Enqueue scripts for the customizer preview.
- *
- * @since SiejmyAMP 1.0
- *
  * @return void
  */
 function siejmyamp_customize_preview_init() {
@@ -309,8 +294,6 @@ add_action( 'customize_preview_init', 'siejmyamp_customize_preview_init' );
 
 /**
  * Get an array of elements.
- *
- * @since SiejmyAMP 1.0
  *
  * @return array
  */
@@ -372,9 +355,8 @@ function siejmyamp_get_elements_array() {
 	);
 
 	/**
-	* Filters SiejmyAMP theme elements
+	* Filters theme elements
 	*
-	* @since SiejmyAMP 1.0
 	*
 	* @param array Array of elements
 	*/

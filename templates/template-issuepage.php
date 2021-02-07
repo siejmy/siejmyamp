@@ -6,7 +6,6 @@ require_once(ABSPATH . 'wp-content/plugins/issuepage-plugin/classes/IssuepageRen
  *
  * @package WordPress
  * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
  */
 
 get_header();

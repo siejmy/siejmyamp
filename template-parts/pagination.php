@@ -1,12 +1,11 @@
 <?php
 /**
- * A template partial to output pagination for the SiejmyAMP default theme.
+ * A template partial to output pagination for the theme.
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
  * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
  */
 
 /**

@@ -4,7 +4,6 @@
  *
  * @package WordPress
  * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
  */
 
 if ( ! class_exists( 'TwentyTwenty_Walker_Page' ) ) {
@@ -18,7 +17,6 @@ if ( ! class_exists( 'TwentyTwenty_Walker_Page' ) ) {
 		 * Outputs the beginning of the current element in the tree.
 		 *
 		 * @see Walker::start_el()
-		 * @since 2.1.0
 		 *
 		 * @param string  $output       Used to append additional content. Passed by reference.
 		 * @param WP_Post $page         Page data object.

@@ -4,7 +4,6 @@
  *
  * @package WordPress
  * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
  */
 
 if ( ! function_exists( 'siejmyamp_the_theme_svg' ) ) {

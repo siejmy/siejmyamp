@@ -8,7 +8,6 @@
  *
  * @package WordPress
  * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
  */
 
 if ( ! class_exists( 'TwentyTwenty_Script_Loader' ) ) {

@@ -3,7 +3,6 @@
 /**
  * Color Calculations.
  *
- * @since SiejmyAMP 1.0
  *
  * @param {string} backgroundColor - The background color.
  * @param {number} accentHue - The hue for our accent color.
@@ -29,7 +28,6 @@ function _twentyTwentyColor(backgroundColor, accentHue) {
  * For improved performance we only build half the array
  * depending on dark/light background-color.
  *
- * @since SiejmyAMP 1.0
  *
  * @return {Object} - this
  */
@@ -51,7 +49,6 @@ _twentyTwentyColor.prototype.setAccentColorsArray = function () {
         /**
          * Get a score for this color in contrast to its background color and surrounding text.
          *
-         * @since SiejmyAMP 1.0
          *
          * @param {number} contrastBackground - WCAG contrast with the background color.
          * @param {number} contrastSurroundingText - WCAG contrast with surrounding text.
@@ -116,7 +113,6 @@ _twentyTwentyColor.prototype.setAccentColorsArray = function () {
 /**
  * Get accessible text-color.
  *
- * @since SiejmyAMP 1.0
  *
  * @return {Color} - Returns a Color object.
  */
@@ -127,7 +123,6 @@ _twentyTwentyColor.prototype.getTextColor = function () {
 /**
  * Get accessible color for the defined accent-hue and background-color.
  *
- * @since SiejmyAMP 1.0
  *
  * @return {Color} - Returns a Color object.
  */
@@ -147,7 +142,6 @@ _twentyTwentyColor.prototype.getAccentColor = function () {
 /**
  * Return a new instance of the _twentyTwentyColor object.
  *
- * @since SiejmyAMP 1.0
  *
  * @param {string} backgroundColor - The background color.
  * @param {number} accentHue - The hue for our accent color.

@@ -4,7 +4,6 @@
  *
  * @package WordPress
  * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
  */
 
 ?>
@@ -57,7 +56,6 @@
 							/**
 							 * Allow child themes and plugins to filter the display of the categories in the article header.
 							 *
-							 * @since SiejmyAMP 1.0
 							 *
 							 * @param bool Whether to show the categories in article header, Default true.
 							 */
