@@ -11,7 +11,7 @@ require_once(ABSPATH . 'wp-content/plugins/issuepage-plugin/classes/IssuepageRen
 
 get_header();
 ?>
-<?php include(dirname(__FILE__) . '/../parts/headers/issuepage.php'); ?>
+<?php get_template_part('parts/headers/issuepage'); ?>
 
 <main id="site-content" class="site-content-issuepage" role="main">
 

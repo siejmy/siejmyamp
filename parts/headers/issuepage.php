@@ -1,7 +1,7 @@
 <header class="header-issuepage" role="banner">
   <div class="topline">
     <p><a href="<?php echo(esc_url( get_home_url( null, '/' ))) ?>">⏎ Wróć do portalu</a></p>
-    <?php include(dirname(__FILE__) . '/../megamenu/trigger.php') ?>
+    <?php get_template_part('parts/megamenu/trigger') ?>
   </div>
   <div class="midline">
     <a href="<?php echo(esc_url( get_home_url( null, '/' ))) ?>">
@@ -20,7 +20,7 @@
   <!--<h2 class="subline h6">Portal katolicki</h2>-->
 </header>
 
-<?php include(dirname(__FILE__) . '/../megamenu/menu.php') ?>
+<?php get_template_part('parts/megamenu/menu') ?>
 
 <style>
   .header-issuepage {

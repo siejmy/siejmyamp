@@ -17,7 +17,7 @@
 get_header();
 ?>
 
-<?php include(dirname(__FILE__) . '/parts/headers/home.php'); ?>
+<?php get_template_part('parts/headers/home'); ?>
 
 <main id="site-content" class="sc-index" role="main">
 	<?php get_template_part( 'template-parts/archive-title' ); ?>

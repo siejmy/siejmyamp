@@ -14,14 +14,14 @@ get_header();
 <?php
 $mediaId = get_post_thumbnail_id($post);
 if(empty($mediaId)) {
-	include(dirname(__FILE__) . '/parts/headers/home.php');
+	get_template_part('parts/headers/home');
 } else {
-	include(dirname(__FILE__) . '/parts/headers/single.php');
+	get_template_part('parts/headers/single');
 }
 ?>
 
 <main id="site-content" class="site-content-singular" role="main">
-	<?php include(dirname(__FILE__) . '/parts/content/single.php'); ?>
+	<?php get_template_part('parts/content/single'); ?>
 </main>
 
 <?php get_footer(); ?>

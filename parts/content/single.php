@@ -4,16 +4,16 @@
 <?php
 $mediaId = get_post_thumbnail_id($post);
 if(empty($mediaId)) {
-  include(dirname(__FILE__) . '/header-nomedia.php');
+  get_template_part('parts/content/header-nomedia');
 } else {
-  include(dirname(__FILE__) . '/header-media.php');
+  get_template_part('parts/content/header-media');
 }
 ?>
   <div class="columns">
     <?php
-    include(dirname(__FILE__) . '/content.php');
+    get_template_part('parts/content/content');
 
-    include(dirname(__FILE__) . '/author.php');
+    get_template_part('parts/content/author');
     ?>
   </div>
 </article>

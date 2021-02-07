@@ -10,7 +10,7 @@
 
 get_header();
 ?>
-<?php include(dirname(__FILE__) . '/../parts/headers/home.php'); ?>
+<?php get_template_part('parts/headers/home'); ?>
 
 
 <main id="site-content" role="main">

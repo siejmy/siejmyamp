@@ -1,11 +1,11 @@
-<?php include(dirname(__FILE__) . '/base.php') ?>
+<?php get_template_part('parts/headers/base') ?>
 
-<?php include(dirname(__FILE__) . '/../megamenu/menu.php') ?>
+<?php get_template_part('parts/megamenu/menu') ?>
 
 <aside class="header-subline">
-  <?php include(dirname(__FILE__) . '/../social-icons-horizontal.php') ?>
-  <?php include(dirname(__FILE__) . '/../who-we-are-tooltip.php') ?>
-  <?php include(dirname(__FILE__) . '/../megamenu/trigger.php') ?>
+  <?php get_template_part('parts/social-icons-horizontal') ?>
+  <?php get_template_part('parts/who-we-are-tooltip') ?>
+  <?php get_template_part('parts/megamenu/trigger') ?>
 </aside>
 <style>
   .header-subline {

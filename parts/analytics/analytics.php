@@ -1,4 +1,4 @@
-<?php include(dirname(__FILE__) . '/consent.php') ?>
+<?php get_template_part('parts/analytics/consent') ?>
 
 <amp-analytics data-block-on-consent type="gtag" data-credentials="include">
   <script type="application/json">

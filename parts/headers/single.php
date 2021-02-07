@@ -1,5 +1,5 @@
 <header class="header-single" role="banner">
-    <?php include(dirname(__FILE__) . '/../social-icons-horizontal.php') ?>
+    <?php get_template_part('parts/social-icons-horizontal') ?>
 
     <div class="logo">
       <div class="positioner">
@@ -17,10 +17,10 @@
       </div>
     </div>
 
-    <?php include(dirname(__FILE__) . '/../megamenu/trigger.php') ?>
+    <?php get_template_part('parts/megamenu/trigger') ?>
 </header>
 
-<?php include(dirname(__FILE__) . '/../megamenu/menu.php') ?>
+<?php get_template_part('parts/megamenu/menu') ?>
 
 <style>
   .header-single {
