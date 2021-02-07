@@ -84,6 +84,7 @@ h6 {
 /* -------------------------------------------------------------------------- */
 :root {
   --color-accent: #3ace00;
+  --color-pill: #3ace00;
   --color-text-main: #333;
   --color-text-auxillary: #555;
   --overlays-bg-dark: rgba(3, 4, 40, 0.85);
