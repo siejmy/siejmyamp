@@ -19,6 +19,8 @@ if ( has_nav_menu( 'megamenu' ) ) {
   background: var(--overlays-bg-dark);
   color: white;
   padding: 3rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .megamenu-sidebar h2 {
