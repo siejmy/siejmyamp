@@ -37,7 +37,7 @@ footer {
 	padding: 3rem;
 	width: 100%;
 	background: var(--overlays-bg-dark-opaque);
-	color: rgba(255, 255, 255, 0.9);
+	color: var(--color-text-footer);
 	z-index: var(--z-index-above-sticky);
 }
 
