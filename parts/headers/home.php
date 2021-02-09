@@ -11,7 +11,6 @@
   .header-subline {
     width: 100%;
     height: 6rem;
-    float: left;
     z-index: 5;
     position: relative;
     background: rgba(255, 255, 255, 0.7);
