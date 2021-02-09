@@ -5,7 +5,6 @@
 <aside class="header-subline">
   <?php get_template_part('parts/social-icons-horizontal') ?>
   <?php get_template_part('parts/who-we-are-tooltip') ?>
-  <?php get_template_part('parts/megamenu/trigger') ?>
 </aside>
 <style>
   .header-subline {
