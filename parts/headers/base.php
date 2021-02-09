@@ -1,4 +1,5 @@
 <header class="header-home" role="banner">
+  <span class="logo-counterweight"></span>
   <div class="logo-container">
     <?php
     echo(sprintf('<a href="%s">', esc_url( get_home_url( null, '/' ) )));
@@ -92,5 +93,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .logo-counterweight {
+    flex-grow: 2;
   }
 </style>
