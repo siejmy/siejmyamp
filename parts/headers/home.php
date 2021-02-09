@@ -3,7 +3,6 @@
 <?php get_template_part('parts/megamenu/menu') ?>
 
 <aside class="header-subline">
-  <?php get_template_part('parts/social-icons-horizontal') ?>
   <?php get_template_part('parts/who-we-are-tooltip') ?>
 </aside>
 <style>

@@ -44,6 +44,12 @@
     align-items: center;
   }
 
+  @media(min-width: 768px) {
+    .logo-container {
+      flex-grow: 20;
+    }
+  }
+
   .header-home .logo {
     display: inline-block;
     height: 60px;

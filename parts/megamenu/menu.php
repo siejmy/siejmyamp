@@ -13,6 +13,8 @@ if ( has_nav_menu( 'megamenu' ) ) {
 }
 
 ?>
+
+<?php get_template_part('parts/megamenu/bottom') ?>
 </amp-sidebar>
 <style>
 .megamenu-sidebar {
