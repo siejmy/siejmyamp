@@ -11,7 +11,7 @@
   vertical-align: top;
   font-size: 14px;
   color: var(--color-text-auxillary);
-  margin: 0px 10px;
+  margin: 0;
 }
 
 .who-we-are-tooltip span {
