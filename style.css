@@ -135,12 +135,12 @@ p,
 }
 
 li {
-  margin-bottom: 0;
+  font-size: 1.6em;
+  line-height: 3rem;
 }
 
 li li {
-  font-size: 1.6em;
-  line-height: 3rem;
+  margin-bottom: 0;
 }
 
 h6,
