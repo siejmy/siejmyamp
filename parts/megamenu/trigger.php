@@ -1,13 +1,6 @@
 <div class="megamenu-section">
   <div class="trigger" on="tap:megamenu-sidebar.toggle">
-    <amp-img
-        src="<?php bloginfo('template_url'); ?>/assets/icons/bars.svg"
-        width="26"
-        height="26"
-        alt="Menu"
-        class="icon"
-        noloading
-      ></amp-img>
+    <?php get_template_part('parts/megamenu/trigger-icon') ?>
   </div>
 </div>
 <style>

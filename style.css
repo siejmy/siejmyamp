@@ -135,8 +135,12 @@ p,
 }
 
 li {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   line-height: 3rem;
+}
+
+li li {
+  margin-bottom: 0 !important;
 }
 
 h6,
@@ -241,7 +245,7 @@ ul {
 }
 
 ol {
-  list-style-type: upper-roman;
+  list-style-type: decimal;
 }
 
 /* -------------------------------------------------------------------------- */

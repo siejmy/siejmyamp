@@ -45,6 +45,5 @@
 
 .socico-horizontal a .icon {
   opacity: 0.5;
-  margin: 4px 0 7px 7px;
 }
 </style>
