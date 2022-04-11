@@ -14,6 +14,7 @@ get_header();
 <?php get_template_part('parts/headers/home'); ?>
 
 <main id="site-content" role="main">
+	<?php get_template_part('parts/frontpage-main'); ?>
 	<?php
 
 	if ( have_posts() ) {
