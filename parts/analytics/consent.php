@@ -18,7 +18,7 @@
       <Strong>Niech będzie Pan pochwalony we wszystkich naszych dziełach!</strong>
     </p>
     <span>
-      <button on="tap:analyticsconsent-elem.accept" role="button">Zgadzam się</button>
+      <button on="tap:analyticsconsent-elem.accept" role="button">Zgadzam się na 🍪</button>
     </span>
   </div>
 </amp-consent>
@@ -30,8 +30,8 @@
     bottom: 0;
     right: 0;
     padding: 1rem;
-    padding-bottom: 2rem;
-    background: var(--overlays-bg-dark);
+    padding-bottom: 3rem;
+    background: var(--overlays-bg-dark-opaque);
     color: white;
     box-shadow: 0 0 12px 5px rgba(0,0,0,.4);
   }
@@ -39,7 +39,7 @@
   #consent-ui p {
     margin: 0 auto;
     max-width: var(--text-column-width);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: 14px;
     line-height: 20px;
   }
@@ -54,8 +54,8 @@
     color: white;
     background: var(--color-accent);
     border: 0;
-    padding: 7px;
-    font-size: 16px;
+    padding: 15px;
+    font-size: 30px;
     box-shadow: 1px 1px 5px 1px rgba(0,0,0,.4);
   }
 </style>
