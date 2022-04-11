@@ -21,7 +21,7 @@ require_once(dirname(__FILE__) . '/config.php');
 
 		<p class="footer-info">
 			Copyright &copy; 2019 - <?php echo(date('Y')); ?> by Wydawnictwo Siejmy.
-			Projekt strony internetowej: <a href="https://jedrzej.lewandowski.doctor/">Jędrzej Lewandowski</a>.
+			Projekt strony internetowej: <a href="https://cv.jblewandowski.com/">Jędrzej Lewandowski</a>.
 			Zobacz: <a href="<?php echo(Config::$thanksUrl) ?>">Podziękowania</a>, <a href="<?php echo(Config::$privacyUrl) ?>">Polityka prywatności</a>
 			<?php get_template_part('parts/analytics/update-consent-btn') ?>
 		</p>
