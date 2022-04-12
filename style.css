@@ -9,4 +9,7 @@
  License:      Unlicensed
  Text Domain:  siejmyamp
 */
-/* Styles for SiejmyAMP are defined in scss/index */
+/*
+  Styles for SiejmyAMP are defined in scss/index.
+  These styles are meant to be extended by the child themes (SiejmyPLAMP, StworzonaPLAMP, StworzonyPLAMP)
+*/
