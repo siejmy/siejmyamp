@@ -1,0 +1,55 @@
+@use "sass:color";
+
+button,
+.btn {
+  display: block;
+  margin: 0;
+  letter-spacing: 0.1em;
+  border-radius: 0;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  width: fit-content;
+  color: white;
+  text-decoration: none;
+  background-color: $color-accent;
+
+  &.pulsing {
+    -webkit-animation: downloadbtn_pulse 8s infinite;
+    -moz-animation: downloadbtn_pulse 8s infinite;
+    -ms-animation: downloadbtn_pulse 8s infinite;
+    animation: downloadbtn_pulse 8s infinite;
+    -webkit-animation-timing-function: cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation-timing-function: cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation-timing-function: cubic-bezier(0.66, 0, 0, 1);
+    animation-timing-function: cubic-bezier(0.66, 0, 0, 1);
+  }
+
+  &.growing {
+    box-shadow: 0 0 0 0 color.change($color-accent, $alpha: 0.7);
+    transition: font-size 0.5s ease-in-out;
+
+    &:hover {
+      font-size: 2rem;
+    }
+  }
+}
+
+@keyframes downloadbtn_pulse {
+  30% {
+    box-shadow: 0 0 0 0 color.change($color-accent, $alpha: 0.7);
+  }
+
+  40% {
+    box-shadow: 0 0 0 35px color.change($color-accent, $alpha: 0);
+  }
+
+  40.02% {
+    box-shadow: 0 0 0 0 color.change($color-accent, $alpha: 0.7);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 color.change($color-accent, $alpha: 0.7);
+  }
+}

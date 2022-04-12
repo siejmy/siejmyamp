@@ -1,0 +1,29 @@
+$color-accent: #3ace00;
+$color-pill: #3ace00;
+$color-text-main: #333;
+$color-text-auxillary: #555;
+$color-text-footer: rgba(255, 255, 255, 0.9);
+$overlays-bg-dark: rgba(3, 4, 40, 0.85);
+$overlays-bg-dark-opaque: rgba(3, 4, 40, 1);
+
+$text-column-width: 680px;
+$content-max-width: 1300px;
+
+$z-index-above-sticky: 6;
+$z-index-sticky: 4;
+
+:root {
+  --color-accent: $color-accent;
+  --color-pill: $color-pill;
+  --color-text-main: $color-text-main;
+  --color-text-auxillary: $color-text-auxillary;
+  --color-text-footer: $color-text-footer;
+  --overlays-bg-dark: $overlays-bg-dark;
+  --overlays-bg-dark-opaque: $overlays-bg-dark-opaque;
+
+  --text-column-width: $text-column-width;
+  --content-max-width: $content-max-width;
+
+  --z-index-above-sticky: $z-index-above-sticky;
+  --z-index-sticky: $z-index-sticky;
+}

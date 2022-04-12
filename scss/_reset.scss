@@ -53,22 +53,3 @@ h6 {
   -webkit-hyphens: auto !important;
   hyphens: auto !important;
 }
-
-/* -------------------------------------------------------------------------- */
-/*	Vars
-/* -------------------------------------------------------------------------- */
-:root {
-  --color-accent: #3ace00;
-  --color-pill: #3ace00;
-  --color-text-main: #333;
-  --color-text-auxillary: #555;
-  --color-text-footer: rgba(255, 255, 255, 0.9);
-  --overlays-bg-dark: rgba(3, 4, 40, 0.85);
-  --overlays-bg-dark-opaque: rgba(3, 4, 40, 1);
-  --text-column-width: 680px;
-
-  --z-index-above-sticky: 6;
-  --z-index-sticky: 4;
-
-  --content-max-width: 1300px;
-}
