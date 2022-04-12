@@ -32,18 +32,3 @@
     />
   </a>
 </span>
-<style>
-.socico-horizontal {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.socico-horizontal a {
-  display: inline-block;
-  text-decoration: none;
-}
-
-.socico-horizontal a .icon {
-  opacity: 0.5;
-}
-</style>

@@ -17,19 +17,3 @@ if(empty($mediaId)) {
     ?>
   </div>
 </article>
-<style>
-
-@media(min-width: 1200px) {
-  .single-article .columns {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .author-profile {
-    position: absolute;
-    top: 9rem;
-    left: calc(50% + (var(--text-column-width)/2) + 3rem);
-  }
-}
-</style>

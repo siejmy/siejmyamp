@@ -16,30 +16,3 @@ if ( has_nav_menu( 'megamenu' ) ) {
 
 <?php get_template_part('parts/megamenu/bottom') ?>
 </amp-sidebar>
-<style>
-.megamenu-sidebar {
-  background: var(--overlays-bg-dark);
-  color: white;
-  padding: 3rem;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.megamenu-sidebar h2 {
-  font-weight: 100;
-}
-
-.megamenu-sidebar ul {
-  list-style-type: none;
-}
-
-.megamenu-sidebar li {
-  margin-bottom: 3rem;
-  text-align: right;
-}
-
-.megamenu-sidebar li a {
-  font-weight: 400;
-  letter-spacing: 0.5px;
-}
-</style>
