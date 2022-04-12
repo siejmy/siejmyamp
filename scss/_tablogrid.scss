@@ -122,7 +122,7 @@
 
 // Generator:
 $screenBreak: $desktop-min-width;
-$step: 30px;
+$step: 50px;
 
 @while $screenBreak<$content-max-width {
   @media (min-width: $screenBreak) {
