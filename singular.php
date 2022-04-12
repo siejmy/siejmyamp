@@ -22,6 +22,8 @@ if(empty($mediaId)) {
 
 <main id="site-content" class="site-content-singular" role="main">
 	<?php get_template_part('parts/content/single'); ?>
+
+	<?php get_template_part('parts/content/single-bottom'); ?>
 </main>
 
 <?php get_footer(); ?>
