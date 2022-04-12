@@ -14,98 +14,100 @@
     margin: 0 auto;
     width: $rowWidth;
     margin-bottom: $gutterSize;
-  }
 
-  .tgrow {
-    display: grid;
-    row-gap: $gutterSize;
-    column-gap: $gutterSize;
 
-    .tgcol {
-      .tablogrid_client {
-        width: 100%;
-        position: relative;
-        contain: strict;
-      }
-    }
-
-    .tgrow.uno {
-      grid-template-columns: 100%;
-      grid-template-rows: $singleCellHeight;
+    .tgrow {
+      display: grid;
+      row-gap: $gutterSize;
+      column-gap: $gutterSize;
 
       .tgcol {
         .tablogrid_client {
-          height: $singleCellHeight;
-        }
-      }
-    }
-
-    .tgrow.tbr {
-      grid-template-columns: $doubleCellWidth $doubleCellWidth;
-      grid-template-rows: $singleCellHeight $singleCellHeight;
-
-      .tgcol.c1 {
-        grid-row: 1 1;
-        grid-column: 1 1;
-
-        .tablogrid_client {
-          height: $doubleCellHeight;
-        }
-      }
-
-      .tgcol.c2 {
-        grid-row: 2 2;
-        grid-column: 1 1;
-
-        .tablogrid_client {
-          height: $doubleCellHeight;
-        }
-      }
-
-      .tgcol.c3 {
-        grid-row-start: 1;
-        grid-row-end: span 2;
-        grid-column: 2 2;
-
-        .tablogrid_client {
-          height: $doubleContainerHeight;
-        }
-      }
-    }
-
-    .tgrow.ltb {
-      grid-template-columns: $doubleCellWidth $doubleCellWidth;
-      grid-template-rows: $singleCellHeight $singleCellHeight;
-
-      .tgcol.c1 {
-        grid-row-start: 1;
-        grid-row-end: span 2;
-        grid-column: 1 1;
-
-        .tablogrid_client {
-          height: $doubleContainerHeight;
-        }
-      }
-
-      .tgcol.c2 {
-        grid-row: 1 1;
-        grid-column: 2 2;
-
-        .tablogrid_client {
-          height: $doubleCellHeight;
-        }
-      }
-
-      .tgcol.c3 {
-        grid-row: 2 2;
-        grid-column: 2 2;
-
-        .tablogrid_client {
-          height: $doubleCellHeight;
+          width: 100%;
+          position: relative;
+          contain: strict;
         }
       }
     }
   }
+
+  .tgrow.uno {
+    grid-template-columns: 100%;
+    grid-template-rows: $singleCellHeight;
+
+    .tgcol {
+      .tablogrid_client {
+        height: $singleCellHeight;
+      }
+    }
+  }
+
+  .tgrow.tbr {
+    grid-template-columns: $doubleCellWidth $doubleCellWidth;
+    grid-template-rows: $singleCellHeight $singleCellHeight;
+
+    .tgcol.c1 {
+      grid-row: 1 1;
+      grid-column: 1 1;
+
+      .tablogrid_client {
+        height: $doubleCellHeight;
+      }
+    }
+
+    .tgcol.c2 {
+      grid-row: 2 2;
+      grid-column: 1 1;
+
+      .tablogrid_client {
+        height: $doubleCellHeight;
+      }
+    }
+
+    .tgcol.c3 {
+      grid-row-start: 1;
+      grid-row-end: span 2;
+      grid-column: 2 2;
+
+      .tablogrid_client {
+        height: $doubleContainerHeight;
+      }
+    }
+  }
+
+  .tgrow.ltb {
+    grid-template-columns: $doubleCellWidth $doubleCellWidth;
+    grid-template-rows: $singleCellHeight $singleCellHeight;
+
+    .tgcol.c1 {
+      grid-row-start: 1;
+      grid-row-end: span 2;
+      grid-column: 1 1;
+
+      .tablogrid_client {
+        height: $doubleContainerHeight;
+      }
+    }
+
+    .tgcol.c2 {
+      grid-row: 1 1;
+      grid-column: 2 2;
+
+      .tablogrid_client {
+        height: $doubleCellHeight;
+      }
+    }
+
+    .tgcol.c3 {
+      grid-row: 2 2;
+      grid-column: 2 2;
+
+      .tablogrid_client {
+        height: $doubleCellHeight;
+      }
+    }
+  }
+}
 }
 
 $screenBreak: $desktop-min-width;
