@@ -39,7 +39,7 @@ if ( strpos( $posts_pagination, 'next page-numbers' ) === false ) {
 if ( $posts_pagination ) { ?>
 
 	<nav class="pagination" role="pagination">
-		<?php echo $posts_pagination; ?>
+		<p><?php echo $posts_pagination; ?></p>
 	</nav>
 
 	<?php
