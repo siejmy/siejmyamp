@@ -1,5 +1,66 @@
 @use "sass:math";
 
+.tgrow_prnt {
+  margin: 0 auto;
+
+  .tgrow {
+    display: grid;
+
+    .tgcol {
+      .tablogrid_client {
+        width: 100%;
+        position: relative;
+        contain: strict;
+      }
+    }
+  }
+
+  .tgrow.uno {
+    grid-template-columns: 100%;
+  }
+
+  .tgrow.tbr {
+    .tgcol.c1 {
+      grid-row: 1 / 1;
+      grid-column: 1 / 1;
+    }
+
+    .tgcol.c2 {
+      grid-row: 2 / 2;
+      grid-column: 1 / 1;
+    }
+
+    .tgcol.c3 {
+      grid-row-start: 1;
+      grid-row-end: span 2;
+      grid-column: 2 / 2;
+    }
+  }
+
+  .tgrow.ltb {
+    .tgcol.c1 {
+      grid-row-start: 1;
+      grid-row-end: span 2;
+      grid-column: 1 / 1;
+    }
+
+    .tgcol.c2 {
+      grid-row: 1 / 1;
+      grid-column: 2 / 2;
+    }
+
+    .tgcol.c3 {
+      grid-row: 2 / 2;
+      grid-column: 2 / 2;
+    }
+  }
+}
+
+.spacer-row-1,
+.spacer-row-2 {
+  margin: 0 auto;
+}
+
 @mixin tablogrid-for-screen-width($screenBreak) {
   $gutterFrac: 0.08;
   $cellRatio: 1.5;
@@ -11,28 +72,16 @@
   $doubleContainerHeight: 2 * $doubleCellHeight + $gutterSize;
 
   .tgrow_prnt {
-    margin: 0 auto;
     width: $rowWidth;
     margin-bottom: $gutterSize;
 
-
     .tgrow {
-      display: grid;
       row-gap: $gutterSize;
       column-gap: $gutterSize;
-
-      .tgcol {
-        .tablogrid_client {
-          width: 100%;
-          position: relative;
-          contain: strict;
-        }
-      }
     }
   }
 
   .tgrow.uno {
-    grid-template-columns: 100%;
     grid-template-rows: $singleCellHeight;
 
     .tgcol {
@@ -58,28 +107,18 @@
     grid-template-rows: $doubleCellHeight $doubleCellHeight;
 
     .tgcol.c1 {
-      grid-row: 1 / 1;
-      grid-column: 1 / 1;
-
       .tablogrid_client {
         height: $doubleCellHeight;
       }
     }
 
     .tgcol.c2 {
-      grid-row: 2 / 2;
-      grid-column: 1 / 1;
-
       .tablogrid_client {
         height: $doubleCellHeight;
       }
     }
 
     .tgcol.c3 {
-      grid-row-start: 1;
-      grid-row-end: span 2;
-      grid-column: 2 / 2;
-
       .tablogrid_client {
         height: $doubleContainerHeight;
       }
@@ -91,28 +130,18 @@
     grid-template-rows: $doubleCellHeight $doubleCellHeight;
 
     .tgcol.c1 {
-      grid-row-start: 1;
-      grid-row-end: span 2;
-      grid-column: 1 / 1;
-
       .tablogrid_client {
         height: $doubleContainerHeight;
       }
     }
 
     .tgcol.c2 {
-      grid-row: 1 / 1;
-      grid-column: 2 / 2;
-
       .tablogrid_client {
         height: $doubleCellHeight;
       }
     }
 
     .tgcol.c3 {
-      grid-row: 2 / 2;
-      grid-column: 2 / 2;
-
       .tablogrid_client {
         height: $doubleCellHeight;
       }
@@ -120,13 +149,11 @@
   }
 
   .spacer-row-1 {
-    margin: 0 auto;
     width: $rowWidth;
     height: $gutterSize;
   }
 
   .spacer-row-2 {
-    margin: 0 auto;
     width: $rowWidth;
     height: 2 * $gutterSize;
   }
