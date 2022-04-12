@@ -1,0 +1,74 @@
+/* source: https://www.digitalocean.com/community/tutorials/css-minimal-css-reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+/*******************************/
+/* wrap long titles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+
+  -ms-word-break: break-all !important;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all !important;
+  /* Instead use this non-standard one: */
+  word-break: break-word !important;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto !important;
+  -moz-hyphens: auto !important;
+  -webkit-hyphens: auto !important;
+  hyphens: auto !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	Vars
+/* -------------------------------------------------------------------------- */
+:root {
+  --color-accent: #3ace00;
+  --color-pill: #3ace00;
+  --color-text-main: #333;
+  --color-text-auxillary: #555;
+  --color-text-footer: rgba(255, 255, 255, 0.9);
+  --overlays-bg-dark: rgba(3, 4, 40, 0.85);
+  --overlays-bg-dark-opaque: rgba(3, 4, 40, 1);
+  --text-column-width: 680px;
+
+  --z-index-above-sticky: 6;
+  --z-index-sticky: 4;
+
+  --content-max-width: 1300px;
+}

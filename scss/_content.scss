@@ -1,0 +1,64 @@
+a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin-left: 3rem;
+  margin-right: 1rem;
+}
+
+ul li,
+ol li {
+  margin-bottom: 3rem;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+figure {
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+figure figcaption {
+  font-size: 1.6em;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+blockquote {
+  border-left: 1rem solid var(--color-accent);
+  padding-left: 2rem;
+  margin-left: 0;
+  margin-bottom: 3rem;
+  line-height: 3rem;
+}
+
+blockquote p {
+  font-size: 3.2em;
+  line-height: 6rem;
+  font-weight: 100;
+}
+
+blockquote cite {
+  margin: 0;
+  font-weight: 100;
+  margin-left: 3rem;
+  font-style: italic;
+  font-size: 1.5em;
+  text-align: right;
+  width: 100%;
+  display: block;
+}

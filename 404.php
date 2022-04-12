@@ -21,13 +21,6 @@ get_header();
 	Jeśli chdesz nam pomóc i jesteś pewien, że strona powinna tutaj być — napisz do
 	nas na <strong><?php echo(Config::$contantEmail); ?></strong>
 </main>
-<style>
-.site-content-404 {
-	max-width: 680px;
-	margin: 0 auto;
-	margin-bottom: 18rem;
-}
-</style>
 
 <?php
 get_footer();

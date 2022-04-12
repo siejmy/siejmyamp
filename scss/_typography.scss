@@ -1,0 +1,117 @@
+/*
+Root font size: 10px;
+Base (Paragraph) Font Size: 1.6em
+Scale ratio mobile: 1.2 (default = mobile first ;) )
+Scale ratio desktop: 1.25
+Source: https://archetypeapp.com/#
+*/
+
+html,
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  color: var(--color-text-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+
+p,
+.p {
+  font-size: 1.6em;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+}
+
+li {
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+li li {
+  margin-bottom: 0 !important;
+}
+
+h6,
+.h6 {
+  font-size: 1.92em;
+  line-height: 3rem;
+}
+
+h5,
+.h5 {
+  font-size: 2.304em;
+  line-height: 3rem;
+}
+
+h4,
+.h4 {
+  font-size: 2.7648em;
+  line-height: 3rem;
+}
+
+h3,
+.h3 {
+  font-size: 3.31776em;
+  line-height: 6rem;
+}
+
+h2,
+.h2 {
+  font-size: 3.98131em;
+  line-height: 6rem;
+}
+
+h1,
+.h1 {
+  font-size: 4.77757em;
+  line-height: 6rem;
+}
+
+@media (min-width: 768px) {
+
+  /* Scale ratio desktop: 1.25 */
+  h6,
+  .h6 {
+    font-size: 2em;
+    line-height: 3rem;
+  }
+
+  h5,
+  .h5 {
+    font-size: 2.5em;
+    line-height: 3rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 3.125em;
+    line-height: 6rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 3.90625em;
+    line-height: 6rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 4.88281em;
+    line-height: 6rem;
+  }
+
+  h1,
+  .h1 {
+    font-size: 6.10352em;
+    line-height: 9rem;
+  }
+}
