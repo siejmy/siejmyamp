@@ -13,17 +13,17 @@ $z-index-above-sticky: 6;
 $z-index-sticky: 4;
 
 :root {
-  --color-accent: $color-accent;
-  --color-pill: $color-pill;
-  --color-text-main: $color-text-main;
-  --color-text-auxillary: $color-text-auxillary;
-  --color-text-footer: $color-text-footer;
-  --overlays-bg-dark: $overlays-bg-dark;
-  --overlays-bg-dark-opaque: $overlays-bg-dark-opaque;
+  --color-accent: #{$color-accent};
+  --color-pill: #{$color-pill};
+  --color-text-main: #{$color-text-main};
+  --color-text-auxillary: #{$color-text-auxillary};
+  --color-text-footer: #{$color-text-footer};
+  --overlays-bg-dark: #{$overlays-bg-dark};
+  --overlays-bg-dark-opaque: #{$overlays-bg-dark-opaque};
 
-  --text-column-width: $text-column-width;
-  --content-max-width: $content-max-width;
+  --text-column-width: #{$text-column-width};
+  --content-max-width: #{$content-max-width};
 
-  --z-index-above-sticky: $z-index-above-sticky;
-  --z-index-sticky: $z-index-sticky;
+  --z-index-above-sticky: #{$z-index-above-sticky};
+  --z-index-sticky: #{$z-index-sticky};
 }
