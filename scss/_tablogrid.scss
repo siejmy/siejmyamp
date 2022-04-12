@@ -44,7 +44,7 @@
       grid-template-columns: $doubleCellWidth $doubleCellWidth;
       grid-template-rows: $singleCellHeight $singleCellHeight;
 
-      .tgcol:nth-child(1) {
+      .tgcol.c1 {
         grid-row: 1 1;
         grid-column: 1 1;
 
@@ -53,7 +53,7 @@
         }
       }
 
-      .tgcol:nth-child(2) {
+      .tgcol.c2 {
         grid-row: 2 2;
         grid-column: 1 1;
 
@@ -62,7 +62,7 @@
         }
       }
 
-      .tgcol:nth-child(3) {
+      .tgcol.c3 {
         grid-row-start: 1;
         grid-row-end: span 2;
         grid-column: 2 2;
@@ -77,7 +77,7 @@
       grid-template-columns: $doubleCellWidth $doubleCellWidth;
       grid-template-rows: $singleCellHeight $singleCellHeight;
 
-      .tgcol:nth-child(1) {
+      .tgcol.c1 {
         grid-row-start: 1;
         grid-row-end: span 2;
         grid-column: 1 1;
@@ -87,7 +87,7 @@
         }
       }
 
-      .tgcol:nth-child(2) {
+      .tgcol.c2 {
         grid-row: 1 1;
         grid-column: 2 2;
 
@@ -96,7 +96,7 @@
         }
       }
 
-      .tgcol:nth-child(3) {
+      .tgcol.c3 {
         grid-row: 2 2;
         grid-column: 2 2;
 
