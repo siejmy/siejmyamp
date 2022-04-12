@@ -118,6 +118,18 @@
       }
     }
   }
+
+  .spacer-row-1 {
+    margin: 0 auto;
+    width: $rowWidth;
+    height: $gutterSize;
+  }
+
+  .spacer-row-2 {
+    margin: 0 auto;
+    width: $rowWidth;
+    height: 2 * $gutterSize;
+  }
 }
 
 // Generator:
@@ -130,16 +142,4 @@ $step: 50px;
   }
 
   $screenBreak: $screenBreak+$step;
-}
-
-.spacer-row-1 {
-  margin: 0 auto;
-  max-width: var(--content-max-width);
-  padding-bottom: 4%;
-}
-
-.spacer-row-2 {
-  margin: 0 auto;
-  max-width: var(--content-max-width);
-  padding-bottom: 8%;
 }
