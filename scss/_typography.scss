@@ -76,7 +76,7 @@ h1,
   line-height: 6rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $desktop-min-width) {
 
   /* Scale ratio desktop: 1.25 */
   h6,

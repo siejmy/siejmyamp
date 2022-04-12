@@ -23,7 +23,7 @@
   height: 66vh;
 }
 
-@media(min-width: 768px) {
+@media(min-width: $desktop-min-width) {
   .posthero amp-img {
     height: 66vw;
     /* 1/2 since the image occupies the full viewport */

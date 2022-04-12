@@ -75,7 +75,7 @@ body>footer {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $desktop-min-width) {
   .footer-widgets-columns {
     max-width: var(--content-max-width);
     margin: 0 auto;

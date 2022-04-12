@@ -18,7 +18,7 @@
   object-fit: cover;
 }
 
-@media(min-width: 768px) {
+@media(min-width: $desktop-min-width) {
   .author-profile amp-img img {
     filter: grayscale(100%);
     object-fit: cover;
