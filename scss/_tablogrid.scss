@@ -1,4 +1,4 @@
-@import "tablogrid/index";
+@import "../../../plugins/tablogrid-plugin/scss/frontend-mixin";
 
 @include tablogrid($desktop-min-width: $desktop-min-width,
   $desktop-max-width: $content-max-width,
