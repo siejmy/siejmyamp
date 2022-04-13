@@ -1,1 +1,29 @@
-@mixin tablogrid-mobile() {}
+@mixin tablogrid-mobile($gutterFrac) {
+  $percentGutter: $gutterFrac * 100;
+
+  .tgrow_prnt {
+    margin: 0 auto;
+    max-width: (100 - $percentGutter) * 1vw;
+
+    .tgrow {
+      margin: 0;
+      padding: 0;
+
+      .tgcol {
+        margin: 0;
+        padding: 0;
+        margin-bottom: $percentGutter * 1vw;
+      }
+    }
+  }
+
+  .spacer-row-1 {
+    width: 100%;
+    height: $percentGutter * 1vw;
+  }
+
+  .spacer-row-2 {
+    width: 100%;
+    height: $percentGutter * 2vw;
+  }
+}
