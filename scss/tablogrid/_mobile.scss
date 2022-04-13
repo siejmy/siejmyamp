@@ -1,9 +1,13 @@
-@mixin tablogrid-mobile($gutterFrac) {
+@use "sass:math";
+
+@mixin tablogrid-mobile($gutterFrac, $cellRatio) {
   $percentGutter: $gutterFrac * 100;
+  $contentWidth: (100 - $percentGutter) * 1vw;
+  $cellHeight: math.div($contentWidth, $cellRatio);
 
   .tgrow_prnt {
     margin: 0 auto;
-    width: (100 - $percentGutter) * 1vw;
+    width: $contentWidth;
 
     .tgrow {
       margin: 0;
@@ -13,6 +17,10 @@
         margin: 0;
         padding: 0;
         margin-bottom: $percentGutter * 1vw;
+
+        .tablogrid_client {
+          height: $cellHeight;
+        }
       }
     }
   }

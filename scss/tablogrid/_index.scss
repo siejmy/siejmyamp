@@ -10,7 +10,7 @@
   $cell-width-to-height-ratio) {
 
   @include client();
-  @include tablogrid-mobile($gutterFrac: $gutter-fraction);
+  @include tablogrid-mobile($gutterFrac: $gutter-fraction, $cellRatio: $cell-width-to-height-ratio);
 
   @media(min-width: $desktop-min-width) {
     @include tablogrid-mobile-disabler();
