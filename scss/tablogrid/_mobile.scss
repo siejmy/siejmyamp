@@ -2,7 +2,7 @@
 
 @mixin tablogrid-mobile($gutterFrac, $cellRatio) {
   $percentGutter: $gutterFrac * 100;
-  $contentWidth: (100 - $percentGutter) * 1vw;
+  $contentWidth: (100 - 2 * $percentGutter) * 1vw;
   $cellHeight: math.div($contentWidth, $cellRatio);
 
   .tgrow_prnt {

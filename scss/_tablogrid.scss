@@ -3,6 +3,7 @@
 @include tablogrid($desktop-min-width: $desktop-min-width,
   $desktop-max-width: $content-max-width,
   $breakpoint-step: 50px,
-  $gutter-fraction: 0.08,
-  $desktop-cell-width-to-height-ratio: 1.5,
-  $mobile-cell-width-to-height-ratio: 0.66)
+  $gutter-fraction-desktop: 0.08,
+  $gutter-fraction-mobile: 0.04,
+  $cell-width-to-height-ratio-desktop: 1.5,
+  $cell-width-to-height-ratio-mobile: 0.66)

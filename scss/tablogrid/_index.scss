@@ -6,12 +6,13 @@
 @mixin tablogrid($desktop-min-width,
   $desktop-max-width,
   $breakpoint-step,
-  $gutter-fraction,
-  $desktop-cell-width-to-height-ratio,
-  $mobile-cell-width-to-height-ratio) {
+  $gutter-fraction-desktop,
+  $gutter-fraction-mobile,
+  $cell-width-to-height-ratio-desktop,
+  $cell-width-to-height-ratio-mobile) {
 
   @include client();
-  @include tablogrid-mobile($gutterFrac: $gutter-fraction, $cellRatio: $mobile-cell-width-to-height-ratio);
+  @include tablogrid-mobile($gutterFrac: $gutter-fraction-mobile, $cellRatio: $cell-width-to-height-ratio-mobile);
 
   @media(min-width: $desktop-min-width) {
     @include tablogrid-mobile-disabler();
@@ -24,8 +25,8 @@
   @while $currentMinWidth<$desktop-max-width {
     @media (min-width: $currentMinWidth) {
       @include tablogrid-for-screen-width($screenBreak: $currentMinWidth,
-        $gutterFrac: $gutter-fraction,
-        $cellRatio: $desktop-cell-width-to-height-ratio);
+        $gutterFrac: $gutter-fraction-desktop,
+        $cellRatio: $cell-width-to-height-ratio-desktop);
     }
 
     $currentMinWidth: $currentMinWidth+$step;
