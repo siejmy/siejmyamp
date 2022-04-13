@@ -1,0 +1,97 @@
+@use "sass:math";
+
+@mixin tablogrid-for-screen-width($screenBreak, $gutterFrac, $cellRatio) {
+  $rowWidth: ((1-$gutterFrac)) * $screenBreak;
+  $gutterSize: $gutterFrac * $screenBreak;
+  $singleCellHeight: math.div($rowWidth, $cellRatio);
+  $doubleCellWidth: math.div($rowWidth - $gutterSize, 2);
+  $doubleCellHeight: math.div($doubleCellWidth, $cellRatio);
+  $doubleContainerHeight: 2 * $doubleCellHeight + $gutterSize;
+
+  .tgrow_prnt {
+    width: $rowWidth;
+    margin-bottom: $gutterSize;
+
+    .tgrow {
+      row-gap: $gutterSize;
+      column-gap: $gutterSize;
+    }
+  }
+
+  .tgrow.uno {
+    grid-template-rows: $singleCellHeight;
+
+    .tgcol {
+      .tablogrid_client {
+        height: $singleCellHeight;
+      }
+    }
+  }
+
+  .tgrow.duo {
+    grid-template-columns: $doubleCellWidth $doubleCellWidth;
+    grid-template-rows: $doubleCellHeight;
+
+    .tgcol {
+      .tablogrid_client {
+        height: $doubleCellHeight;
+      }
+    }
+  }
+
+  .tgrow.tbr {
+    grid-template-columns: $doubleCellWidth $doubleCellWidth;
+    grid-template-rows: $doubleCellHeight $doubleCellHeight;
+
+    .tgcol.c1 {
+      .tablogrid_client {
+        height: $doubleCellHeight;
+      }
+    }
+
+    .tgcol.c2 {
+      .tablogrid_client {
+        height: $doubleCellHeight;
+      }
+    }
+
+    .tgcol.c3 {
+      .tablogrid_client {
+        height: $doubleContainerHeight;
+      }
+    }
+  }
+
+  .tgrow.ltb {
+    grid-template-columns: $doubleCellWidth $doubleCellWidth;
+    grid-template-rows: $doubleCellHeight $doubleCellHeight;
+
+    .tgcol.c1 {
+      .tablogrid_client {
+        height: $doubleContainerHeight;
+      }
+    }
+
+    .tgcol.c2 {
+      .tablogrid_client {
+        height: $doubleCellHeight;
+      }
+    }
+
+    .tgcol.c3 {
+      .tablogrid_client {
+        height: $doubleCellHeight;
+      }
+    }
+  }
+
+  .spacer-row-1 {
+    width: $rowWidth;
+    height: $gutterSize;
+  }
+
+  .spacer-row-2 {
+    width: $rowWidth;
+    height: 2 * $gutterSize;
+  }
+}
