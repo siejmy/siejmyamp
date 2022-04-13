@@ -7,9 +7,11 @@
   $breakpoint-step,
   $gutter-fraction,
   $cell-width-to-height-ratio) {
-  @include tablogrid-mobile();
+
+  @include tablogrid-mobile($gutterFrac: $gutter-fraction);
 
   @media(min-width: $desktop-min-width) {
+    @include tablogrid-mobile-disabler();
     @include tablogrid-desktop-static();
   }
 

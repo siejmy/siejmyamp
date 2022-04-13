@@ -3,7 +3,7 @@
 
   .tgrow_prnt {
     margin: 0 auto;
-    max-width: (100 - $percentGutter) * 1vw;
+    width: (100 - $percentGutter) * 1vw;
 
     .tgrow {
       margin: 0;
@@ -25,5 +25,17 @@
   .spacer-row-2 {
     width: 100%;
     height: $percentGutter * 2vw;
+  }
+}
+
+@mixin tablogrid-mobile-disabler {
+  .tgrow_prnt {
+    width: auto;
+  }
+
+  .tgrow {
+    .tgcol {
+      margin-bottom: 0;
+    }
   }
 }
