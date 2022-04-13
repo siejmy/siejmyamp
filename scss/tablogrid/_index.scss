@@ -1,3 +1,4 @@
+@import"client";
 @import "mobile";
 @import "desktop-static";
 @import "desktop-generator";
@@ -8,6 +9,7 @@
   $gutter-fraction,
   $cell-width-to-height-ratio) {
 
+  @include client();
   @include tablogrid-mobile($gutterFrac: $gutter-fraction);
 
   @media(min-width: $desktop-min-width) {
