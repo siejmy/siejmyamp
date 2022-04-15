@@ -22,9 +22,12 @@
   display: block;
   width: 100%;
   text-align: center;
+  margin: 0 auto;
 }
 
 #consent-ui button {
+  display: block;
+  margin: 0 auto;
   color: white;
   background: var(--color-accent);
   border: 0;
