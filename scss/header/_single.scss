@@ -1,5 +1,5 @@
 .header-single {
-  z-index: var(--z-index-above-sticky);
+  z-index: $z-index-above-sticky;
   position: relative;
   margin: 0 auto;
   width: 100%;
@@ -29,7 +29,7 @@
 }
 
 .header-single .logo a {
-  background: var(--color-accent);
+  background: $color-accent;
   position: absolute;
   top: 0;
   left: 0;
@@ -37,7 +37,7 @@
   display: block;
   width: 100px;
   height: 100px;
-  z-index: var(--z-index-above-sticky);
+  z-index: $z-index-above-sticky;
   text-align: center;
   text-decoration: none;
 }

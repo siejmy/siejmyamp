@@ -1,11 +1,11 @@
 .pagination {
   margin: 0 auto;
-  max-width: var(--content-max-width);
+  max-width: $content-max-width;
   text-align: center;
   margin-top: 4%;
 
   .page-numbers {
-    background: var(--color-accent);
+    background: $color-accent;
     padding: 1rem;
     margin: 0 1rem;
     display: inline-block;

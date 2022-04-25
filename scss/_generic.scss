@@ -39,7 +39,7 @@ figure figcaption {
 }
 
 blockquote {
-  border-left: 1rem solid var(--color-accent);
+  border-left: 1rem solid $color-accent;
   padding-left: 2rem;
   margin-left: 0;
   margin-bottom: 3rem;

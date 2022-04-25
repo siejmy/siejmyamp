@@ -3,7 +3,7 @@
 }
 
 .header-nomedia h1 {
-  max-width: var(--text-column-width);
+  max-width: $text-column-width;
   margin: 0 auto;
 }
 
@@ -34,7 +34,7 @@
 
 
 .posthero .herocaption {
-  max-width: var(--text-column-width);
+  max-width: $text-column-width;
   margin: 0 auto;
   text-align: center;
 
