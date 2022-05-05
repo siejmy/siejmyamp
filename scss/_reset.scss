@@ -32,12 +32,14 @@ ul {
 
 /*******************************/
 /* wrap long titles */
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+li {
   overflow-wrap: break-word !important;
   word-wrap: break-word !important;
 
