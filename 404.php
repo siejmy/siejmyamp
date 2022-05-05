@@ -1,6 +1,4 @@
 <?php
- require_once(dirname(__FILE__) . '/config.php');
-
 /**
  * The template for displaying the 404 template in the SiejmyAMP theme.
  *
@@ -19,7 +17,7 @@ get_header();
 	<h2>Bardzo nam przykro, przepraszamy!</h2>
 	<p>Naprawdę nie wiemy jak to się stało, że nie ma tutaj tej strony.
 	Jeśli chdesz nam pomóc i jesteś pewien, że strona powinna tutaj być — napisz do
-	nas na <strong><?php echo(Config::$contantEmail); ?></strong>
+	nas na <strong><?php echo(SiejmyConfig::$contactEmail); ?></strong>
 </main>
 
 <?php

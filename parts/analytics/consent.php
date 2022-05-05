@@ -1,5 +1,3 @@
-<?php  require_once(dirname(__FILE__) . '/../../config.php'); ?>
-
 <amp-consent layout="nodisplay" id="analyticsconsent-elem">
   <script type="application/json">
     {
@@ -14,7 +12,7 @@
       Siejmy, tak jak (prawie) wszystkie inne strony wykorzystuje
       ciasteczka oraz analityki Google/Facebook. Używamy tych zbiorczych i anonimowych
       danych tylko aby dowiedzieć się, które treści najbardziej Wam się podobają.
-      <a href="<?php echo(Config::$privacyUrl) ?>">Polityka prywatności</a>
+      <a href="<?php echo(SiejmyConfig::$privacyUrl) ?>">Polityka prywatności</a>
       <Strong>Niech będzie Pan pochwalony we wszystkich naszych dziełach!</strong>
     </p>
     <span>
