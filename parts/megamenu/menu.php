@@ -1,5 +1,5 @@
 <amp-sidebar id="megamenu-sidebar" class="megamenu-sidebar" layout="nodisplay" side="left">
-  <h2>Co<br /> chcesz zobaczyć?</h2>
+  <h2><?php echo get_bloginfo( 'name' ); ?></h2>
 
   <?php
 
