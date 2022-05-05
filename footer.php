@@ -1,7 +1,7 @@
 <footer id="site-footer" role="contentinfo" class="header-footer-group">
 	<div class="footer-shadow"></div>
 	<div class="footer-content">
-		<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
+		<?php get_template_part( 'parts/footer-menus-widgets' ); ?>
 
 		<p class="footer-info">
 			Copyright &copy; 2019 - <?php echo(date('Y')); ?> by Wydawnictwo Siejmy.

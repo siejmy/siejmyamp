@@ -1,14 +1,4 @@
 <?php
-/**
- * A template partial to output pagination for the SiejmyAMP default theme.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Twenty
- * @since SiejmyAMP 1.0
- */
-
 $prev_text = sprintf(
 	'%s <span class="nav-prev-text">%s</span>',
 	'<span aria-hidden="true">&larr;</span>',
@@ -36,9 +26,6 @@ if ( strpos( $posts_pagination, 'next page-numbers' ) === false ) {
 	$posts_pagination = str_replace( '</div>', '<span class="next page-numbers placeholder" aria-hidden="true">' . $next_text . '</span></div>', $posts_pagination );
 }
 
-if ( $posts_pagination ) { ?>
-
-	<?php echo $posts_pagination; ?>
-
-	<?php
+if ( $posts_pagination ) {
+	echo $posts_pagination;
 }

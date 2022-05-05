@@ -20,18 +20,18 @@ get_header();
 <?php get_template_part('parts/headers/home'); ?>
 
 <main id="site-content" class="sc-index" role="main">
-	<?php get_template_part( 'template-parts/archive-title' ); ?>
+	<?php get_template_part( 'parts/archive-title' ); ?>
 
 	<?php
 
 	if ( have_posts() ) {
 		while ( have_posts() ) {
-			get_template_part( 'template-parts/tablogrid-posts-random' );
+			get_template_part( 'parts/tablogrid-posts-random' );
 		}
 	}
 	?>
 
-	<?php get_template_part( 'template-parts/pagination' ); ?>
+	<?php get_template_part( 'parts/pagination' ); ?>
 </main>
 
 <?php
