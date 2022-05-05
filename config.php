@@ -8,5 +8,4 @@ class Config {
   static $contantEmail = "siejmy.pl@gmail.com";
   static $thanksUrl = "/podziekowania-techniczne/";
   static $privacyUrl = "/polityka-prywatnosci/";
-  static $facebookAppId = "357764061986952";
 }
