@@ -66,3 +66,13 @@ blockquote {
     display: block;
   }
 }
+
+table {
+  font-size: 1.3em;
+  overflow: scroll;
+
+  td {
+    padding: 1rem;
+    min-width: 12rem;
+  }
+}

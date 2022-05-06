@@ -20,7 +20,7 @@
   transform: scaleZ(1) scale(1.03);
 }
 
-.single-content figure::before {
+.single-content .wp-block-image::before {
   content: "Kliknij aby powiększyć ☞";
   float: right;
   font-size: 12px;
