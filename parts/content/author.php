@@ -5,6 +5,9 @@
 
   if(function_exists('get_avatar_data')) {
     $avatarData = get_avatar_data($post->post_author);
+    echo('<!-- avatar_data');
+    print_r($avatarData);
+    echo('-->');
     $url = $avatarData['url'];
     $id = empty($url) ? '' : attachment_url_to_postid($url);
     $alt = '';
@@ -14,6 +17,8 @@
         'default_size' => 'siejmy_100',
       ));
     }
+  } else {
+    echo('<!-- missing fn get_avatar_data -->');
   }
   ?>
   <a class="author-name" rel="author" href="<?php echo esc_url( get_author_posts_url( $post->post_author ) ); ?>">
