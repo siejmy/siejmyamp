@@ -46,24 +46,23 @@ figure figcaption {
 blockquote {
   border-left: 1rem solid $color-accent;
   padding-left: 2rem;
-  margin-left: 0;
-  margin-bottom: 3rem;
+  margin: 0 0 3rem 0;
   line-height: 3rem;
-}
 
-blockquote p {
-  font-size: 3.2em;
-  line-height: 6rem;
-  font-weight: 100;
-}
+  p {
+    font-size: 2.9em;
+    line-height: 4.3rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+  }
 
-blockquote cite {
-  margin: 0;
-  font-weight: 100;
-  margin-left: 3rem;
-  font-style: italic;
-  font-size: 1.5em;
-  text-align: right;
-  width: 100%;
-  display: block;
+  cite {
+    margin: 0;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 1.5em;
+    text-align: right;
+    width: 100%;
+    display: block;
+  }
 }
