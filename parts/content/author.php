@@ -6,9 +6,6 @@
 
   $authorName = get_the_author_meta('display_name', $post->post_author);
   $avatarData = get_avatar_data($post->post_author, array('size' => $avatarSize));
-  echo('<!-- avatar_data');
-  print_r($avatarData);
-  echo('-->');
   $url = $avatarData['url'];
   echo '<img src="' . $url . '" alt="Avatar ' . $authorName . '" width="' . $avatarSize . '" height="' . $avatarSize . '" />'
   ?>
