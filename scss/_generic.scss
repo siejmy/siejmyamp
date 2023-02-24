@@ -11,6 +11,7 @@ ul,
 ol {
   margin-left: 3rem;
   margin-right: 1rem;
+  margin-bottom: 3rem;
 }
 
 ul li,
@@ -20,7 +21,7 @@ ol li {
 
 p+ol,
 p+ul {
-  margin-top: -1rem;
+  margin-top: -3rem;
 }
 
 ul {

@@ -66,6 +66,7 @@ li {
 
 li li {
   margin-bottom: 0 !important;
+  font-size: 1em; // do not scale further list elements by the base text factor
 }
 
 h1,
@@ -73,15 +74,23 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   font-weight: 900;
 }
 
-h5 {
+h5,
+.h5 {
   color: color.scale($color-text-main, $lightness: 20%);
 }
 
-h5 {
+h6,
+.h6 {
   color: color.scale($color-text-main, $lightness: 40%);
 }
 
