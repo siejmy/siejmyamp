@@ -100,7 +100,7 @@ function siejmyamp_theme_support() {
 function siejmyamp_headers() {
 	header( 'Link: <https://cdn.ampproject.org/v0.js>; rel=preload; as=script' , false);
 	header( 'Link: <https://cdn.ampproject.org/v0/amp-analytics-0.1.js>; rel=preload; as=script' , false);
-	header( 'Link: <https://fonts.googleapis.com/css2?family=Lato%3Aital%2Cwght%400%2C100%3B0%2C300%3B0%2C400%3B0%2C900%3B1%2C300&display=swap&ver=1>; rel=preload; as=style; crossorigin=anonymous' , false);
+	header( 'Link: <https://fonts.googleapis.com/css2?family=Lato%3Aital%2Cwght%400%2C100%3B0%2C300%3B0%2C400%3B0%2C900%3B1%2C300%3B1%2C400&display=swap&ver=1>; rel=preload; as=style; crossorigin=anonymous' , false);
 	header( 'Link: <https://cdn.ampproject.org/v0/amp-consent-0.1.js>; rel=preload; as=script' , false);
 	header( 'Link: <https://cdn.ampproject.org/v0/amp-sidebar-0.1.js>; rel=preload; as=script' , false);
 }
@@ -117,7 +117,7 @@ function siejmyamp_register_styles() {
 
 	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style('font-lato', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,300&display=swap', array(), '1');
+	wp_enqueue_style('font-lato', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,900;1,300;1,400&display=swap', array(), '1');
 
 	wp_enqueue_style( 'siejmyamp-style', get_stylesheet_uri(), array(), $theme_version );
 }
