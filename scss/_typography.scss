@@ -1,17 +1,70 @@
-/*
-Root font size: 10px;
-Base (Paragraph) Font Size: 1.6em
-Scale ratio mobile: 1.2 (default = mobile first ;) )
-Scale ratio desktop: 1.25
-Source: https://archetypeapp.com/#
-*/
+@use "sass:math";
+@use "sass:color";
+
+$desktop-min-width: 768px;
+$color-text-main: #333;
+
+@function lineHeight($line-height, $font-size) {
+  @return $line-height * ceil($font-size / $line-height);
+}
+
+$root-font-size: 10px;
+$base-font-size-mobile: 1.6em;
+$base-font-size-desktop: 1.6em;
+$scale-factor-desktop: 1.25;
+$scale-factor-mobile: 1.2;
+$line-height-mobile: 3rem;
+$line-height-desktop: 3rem;
+$h1-font-size-mobile: $base-font-size-mobile * math.pow($scale-factor-mobile, 4);
+$h1-font-size-desktop: $base-font-size-desktop * math.pow($scale-factor-desktop, 4);
+$h1-line-height-mobile: lineHeight($line-height-mobile, $h1-font-size-mobile);
+$h1-line-height-desktop: lineHeight($line-height-desktop, $h1-font-size-desktop);
+$h2-font-size-mobile: $base-font-size-mobile * math.pow($scale-factor-mobile, 2);
+$h2-font-size-desktop: $base-font-size-desktop * math.pow($scale-factor-desktop, 2);
+$h2-line-height-mobile: lineHeight($line-height-mobile, $h2-font-size-mobile);
+$h2-line-height-desktop: lineHeight($line-height-desktop, $h2-font-size-desktop);
+$h3-font-size-mobile: $base-font-size-mobile * $scale-factor-mobile;
+$h3-font-size-desktop: $base-font-size-desktop * $scale-factor-desktop;
+$h3-line-height-mobile: lineHeight($line-height-mobile, $h3-font-size-mobile);
+$h3-line-height-desktop: lineHeight($line-height-desktop, $h3-font-size-desktop);
+$h456-font-size-mobile: $base-font-size-mobile;
+$h456-font-size-desktop: $base-font-size-desktop;
+$h456-line-height-mobile: $line-height-mobile;
+$h456-line-height-desktop: $line-height-desktop;
 
 html,
 body {
   font-family: "Lato", sans-serif;
-  font-size: 10px;
+  font-size: $root-font-size;
   font-weight: 300;
   color: $color-text-main;
+}
+
+p,
+.p,
+cite {
+  font-size: $base-font-size-mobile;
+  line-height: $line-height-mobile;
+  margin-bottom: 3rem;
+
+  @media (min-width: $desktop-min-width) {
+    font-size: $base-font-size-desktop;
+    line-height: $line-height-desktop;
+  }
+}
+
+li {
+  font-size: $base-font-size-mobile;
+  line-height: $line-height-mobile;
+
+  @media (min-width: $desktop-min-width) {
+    font-size: $base-font-size-desktop;
+    line-height: $line-height-desktop;
+  }
+}
+
+li li {
+  margin-bottom: 0 !important;
 }
 
 h1,
@@ -21,99 +74,60 @@ h4,
 h5,
 h6 {
   font-weight: 900;
-  margin-bottom: 3rem;
 }
 
-p,
-.p,
-cite,
-h2.lead {
-  font-size: 1.6em;
-  line-height: 3rem;
-  margin-bottom: 3rem;
+h5 {
+  color: color.scale($color-text-main, $lightness: 20%);
 }
 
-li {
-  font-size: 1.6rem;
-  line-height: 3rem;
-}
-
-li li {
-  margin-bottom: 0 !important;
-}
-
-h6,
-.h6 {
-  font-size: 1.92em;
-  line-height: 3rem;
-}
-
-h5,
-.h5 {
-  font-size: 2.304em;
-  line-height: 3rem;
+h5 {
+  color: color.scale($color-text-main, $lightness: 40%);
 }
 
 h4,
-.h4 {
-  font-size: 2.7648em;
-  line-height: 3rem;
+h5,
+h6,
+.h4,
+.h5,
+.h6 {
+  font-size: $h456-font-size-mobile;
+  line-height: $h456-line-height-mobile;
+
+  @media (min-width: $desktop-min-width) {
+    font-size: $h456-font-size-desktop;
+    line-height: $h456-line-height-desktop;
+  }
 }
 
 h3,
 .h3 {
-  font-size: 3.31776em;
-  line-height: 6rem;
+  font-size: $h3-font-size-mobile;
+  line-height: $h3-line-height-mobile;
+
+  @media (min-width: $desktop-min-width) {
+    font-size: $h3-font-size-desktop;
+    line-height: $h3-line-height-desktop;
+  }
 }
 
 h2,
 .h2 {
-  font-size: 3.98131em;
-  line-height: 6rem;
+  font-size: $h2-font-size-mobile;
+  line-height: $h2-line-height-mobile;
+
+  @media (min-width: $desktop-min-width) {
+    font-size: $h2-font-size-desktop;
+    line-height: $h2-line-height-desktop;
+  }
 }
 
 h1,
 .h1 {
-  font-size: 4.77757em;
-  line-height: 6rem;
-}
+  font-size: $h1-font-size-mobile;
+  line-height: $h1-line-height-mobile;
 
-@media (min-width: $desktop-min-width) {
-
-  /* Scale ratio desktop: 1.25 */
-  h6,
-  .h6 {
-    font-size: 2em;
-    line-height: 3rem;
-  }
-
-  h5,
-  .h5 {
-    font-size: 2.5em;
-    line-height: 3rem;
-  }
-
-  h4,
-  .h4 {
-    font-size: 3.125em;
-    line-height: 6rem;
-  }
-
-  h3,
-  .h3 {
-    font-size: 3.90625em;
-    line-height: 6rem;
-  }
-
-  h2,
-  .h2 {
-    font-size: 4.88281em;
-    line-height: 6rem;
-  }
-
-  h1,
-  .h1 {
-    font-size: 6.10352em;
-    line-height: 9rem;
+  @media (min-width: $desktop-min-width) {
+    font-size: $h1-font-size-desktop;
+    line-height: $h1-line-height-desktop;
   }
 }
