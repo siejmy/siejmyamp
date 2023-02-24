@@ -1,11 +1,12 @@
 @use "sass:math";
 @use "sass:color";
 
-$desktop-min-width: 768px;
-$color-text-main: #333;
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
 
 @function lineHeight($line-height, $font-size) {
-  @return $line-height * ceil($font-size / $line-height);
+  @return $line-height * ceil(stripUnit($font-size) / stripUnit($line-height));
 }
 
 $root-font-size: 10px;
