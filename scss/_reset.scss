@@ -29,15 +29,3 @@ ol,
 ul {
   list-style: none;
 }
-
-/*******************************/
-/* wrap long titles */
-p,
-h2,
-h3,
-h4,
-h5,
-h6,
-li {
-  overflow-wrap: break-word !important;
-}

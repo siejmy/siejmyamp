@@ -1,0 +1,14 @@
+p,
+h2,
+h3,
+h4,
+h5,
+h6,
+li {
+  overflow-wrap: break-word;
+}
+
+.tablopost .herocaption {
+  // It uses amp-fit-text which does autoscaling and is not fully compatible with overflow-wrap: break-word;
+  overflow-wrap: normal !important;
+}
