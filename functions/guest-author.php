@@ -5,7 +5,7 @@ function siejmyamp_guest_author_name($author_name) {
     if ($guest_author) {
         return $guest_author;
     }
-    return $guest_author;
+    return $author_name;
 }
 add_filter('get_the_author', 'siejmyamp_guest_author_name');
 add_filter('get_the_author_display_name', 'siejmyamp_guest_author_name');
