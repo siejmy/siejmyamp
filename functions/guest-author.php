@@ -3,7 +3,7 @@
 function siejmyamp_guest_author_name($author_name) {
     $guest_author = get_post_meta(get_the_ID(), 'guest_author', true);
     if ($guest_author) {
-        return $override_author_name;
+        return $guest_author;
     }
     return $guest_author;
 }
