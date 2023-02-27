@@ -281,3 +281,5 @@ function wpdocs_current_post_index() {
   global $wp_query;
   return  $wp_query->current_post;
 }
+
+require_once(dirname(__FILE__) . '/functions/guest-author.php');
