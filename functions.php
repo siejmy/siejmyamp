@@ -140,17 +140,6 @@ function siejmyamp_menus() {
 
 add_action( 'init', 'siejmyamp_menus' );
 
-function siejmyamp_register_post_fields() {
-	register_post_meta( 'post', 'guest_author', array(
-			'description' => 'Nazwa autora gościnnego',
-			'show_in_rest' => true,
-			'single' => true,
-			'type' => 'string',
-	) );
-}
-
-add_action( 'init', 'siejmyamp_register_post_fields' );
-
 
 if ( ! function_exists( 'wp_body_open' ) ) {
 
@@ -292,3 +281,5 @@ function wpdocs_current_post_index() {
   global $wp_query;
   return  $wp_query->current_post;
 }
+
+require_once(dirname(__FILE__) . '/functions/guest-author.php');
