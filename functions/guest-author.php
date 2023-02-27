@@ -23,6 +23,15 @@ add_filter('get_the_author_first_name', 'siejmyamp_guest_author_empty_value');
 add_filter('get_the_author_description', 'siejmyamp_guest_author_empty_value');
 add_filter('get_the_author_user_url', 'siejmyamp_guest_author_empty_value');
 
+function siejmyamp_guest_author_update_yoast_seo_author_name($description) {
+	$override_author_name = get_post_meta(get_the_ID(), 'guest_author', true);
+	if ($override_author_name) {
+			$description = str_replace(get_the_author(), $override_author_name, $description);
+	}
+	return $description;
+}
+add_filter('wpseo_metadesc', 'siejmyamp_guest_author_update_yoast_seo_author_name');
+
 function siejmyamp_register_post_fields() {
 	register_post_meta( 'post', 'guest_author', array(
 			'description' => 'Nazwa autora gościnnego',
