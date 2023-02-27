@@ -1,10 +1,12 @@
 <div class="author-profile">
   <?php
+  $avatarSize = 256;
+
   $guest_author = get_post_meta(get_the_ID(), 'guest_author', true);
   if(!empty($guest_author)) {
     $authorName = $guest_author;
     ?>
-    <img src="https://www.gravatar.com/avatar/123?d=mp" alt="Avatar <?php echo $authorName; ?>" width="256" height="256" />
+    <img src="https://www.gravatar.com/avatar/123?d=mp" alt="Avatar <?php echo $authorName; ?>" width="<?php echo $avatarSize; ?>" height="<?php echo $avatarSize; ?>" />
     <a class="author-name" rel="author">Gościnny autor:<br /><u><?php echo $authorName ?></u></a>
     <?php
   } else {
