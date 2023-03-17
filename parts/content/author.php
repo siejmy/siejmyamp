@@ -1,3 +1,8 @@
+<?php
+$author_id = get_the_author_meta('ID');
+$is_admin = in_array($author_id, array(1, 11));
+if(!$is_admin) {
+?>
 <div class="author-profile">
   <?php
   $avatarSize = 256;
@@ -27,3 +32,4 @@
     </a>
   <?php } ?>
 </div>
+<?php } ?>
